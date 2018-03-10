@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeViewTableViewCellIdentifier" rowHeight="87" id="4YH-lZ-F0R" customClass="ContactListTableViewCell" customModule="iOSProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4YH-lZ-F0R" id="QnN-ed-0Sh">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPH-uN-Pnp">
+                        <rect key="frame" x="26" y="4" width="333" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69i-kv-Vha">
+                        <rect key="frame" x="26" y="31" width="333" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsf-j4-jvw">
+                        <rect key="frame" x="26" y="54" width="333" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wsf-j4-jvw" firstAttribute="top" secondItem="69i-kv-Vha" secondAttribute="bottom" constant="2.5" id="0l0-rX-YvQ"/>
+                    <constraint firstItem="69i-kv-Vha" firstAttribute="trailing" secondItem="SPH-uN-Pnp" secondAttribute="trailing" id="0mg-Wd-2bm"/>
+                    <constraint firstAttribute="bottom" secondItem="wsf-j4-jvw" secondAttribute="bottom" constant="5" id="GzS-Ee-e0C"/>
+                    <constraint firstItem="69i-kv-Vha" firstAttribute="top" secondItem="SPH-uN-Pnp" secondAttribute="bottom" constant="3" id="Kga-fg-PDm"/>
+                    <constraint firstItem="SPH-uN-Pnp" firstAttribute="top" secondItem="QnN-ed-0Sh" secondAttribute="top" constant="4" id="Mfb-oZ-ObA"/>
+                    <constraint firstItem="69i-kv-Vha" firstAttribute="leading" secondItem="SPH-uN-Pnp" secondAttribute="leading" id="Wan-YO-tWy"/>
+                    <constraint firstItem="SPH-uN-Pnp" firstAttribute="leading" secondItem="QnN-ed-0Sh" secondAttribute="leading" constant="26" id="aA4-Oo-rBA"/>
+                    <constraint firstItem="wsf-j4-jvw" firstAttribute="leading" secondItem="69i-kv-Vha" secondAttribute="leading" id="bfp-Vd-7sg"/>
+                    <constraint firstAttribute="trailing" secondItem="SPH-uN-Pnp" secondAttribute="trailing" constant="16" id="eqL-2r-Mv4"/>
+                    <constraint firstItem="wsf-j4-jvw" firstAttribute="trailing" secondItem="69i-kv-Vha" secondAttribute="trailing" id="k56-iW-4c2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="69i-kv-Vha" id="YTE-Zi-mfL"/>
+                <outlet property="phoneNumberLabel" destination="wsf-j4-jvw" id="V2k-zs-G7H"/>
+                <outlet property="titleLabel" destination="SPH-uN-Pnp" id="kOK-LI-OH6"/>
+            </connections>
+            <point key="canvasLocation" x="-81.5" y="-429.5"/>
+        </tableViewCell>
+    </objects>
+</document>

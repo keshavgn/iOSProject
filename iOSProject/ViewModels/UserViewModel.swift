@@ -13,7 +13,7 @@ import FirebaseFacebookAuthUI
 import FirebaseTwitterAuthUI
 import FirebasePhoneAuthUI
 
-class UserViewModel {
+final class UserViewModel {
     
     func registerNewUser(email: String, password: String, completion: @escaping ((Bool, String) -> Void)) {
         if isValidEmail(email) {

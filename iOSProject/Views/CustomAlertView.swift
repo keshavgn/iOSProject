@@ -8,8 +8,16 @@
 
 import UIKit
 
-class CustomAlertView: UIView {
+protocol CustomAlertViewDelegate {
+    func didTapDoneButton()
+    func didTapCancelButton()
+}
+
+final class CustomAlertView: UIView {
     
+    var delegate: CustomAlertViewDelegate?
+    var shouldShowCancel = true
+
     private var contentView: AlertView = {
         let subView = AlertView()
         return subView
@@ -27,6 +35,9 @@ class CustomAlertView: UIView {
     
     private func commonInit() {
         backgroundColor = UIColor(white: 0.4, alpha: 0.4)
+        contentView.doneButton.addTarget(self, action: #selector(doneButtonAction), for: .touchDragInside)
+        contentView.cancelButton.addTarget(self, action: #selector(cancelButtonAction), for: .touchDragInside)
+        contentView.shouldShowCancel = shouldShowCancel
     }
     
     override func layoutSubviews() {
@@ -47,9 +58,16 @@ extension CustomAlertView {
         contentView.descriptionLabel.text = description
     }
     
+    @objc private func doneButtonAction() {
+        delegate?.didTapDoneButton()
+    }
+    
+    @objc private func cancelButtonAction() {
+        delegate?.didTapCancelButton()
+    }
 }
 
-class AlertView: UIView, Cardable {
+final class AlertView: UIView, Cardable {
     var maskedCarner: CACornerMask  = [.layerMinXMinYCorner,.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     
     var titleLabel: UILabel = {
@@ -76,7 +94,7 @@ class AlertView: UIView, Cardable {
         return subView
     }()
     
-    private var doneButton: UIButton = {
+    var doneButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("OK", for: .normal)
@@ -91,7 +109,7 @@ class AlertView: UIView, Cardable {
         return subView
     }()
     
-    private var cancelButton: UIButton = {
+    var cancelButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("CANCEL", for: .normal)
@@ -113,11 +131,11 @@ class AlertView: UIView, Cardable {
     
     private func commonInit() {
         backgroundColor = UIColor.white
+        setupUI()
     }
     
     override func layoutSubviews() {
         layoutCard()
-        setupUI()
     }
 }
 
@@ -163,6 +181,5 @@ extension AlertView {
         } else {
             doneButton.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         }
-
     }
 }

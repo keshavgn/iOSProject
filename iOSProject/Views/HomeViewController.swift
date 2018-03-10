@@ -2,78 +2,60 @@
 //  HomeViewController.swift
 //  iOSProject
 //
-//  Created by Keshav on 13/02/18.
+//  Created by Keshav on 26/02/18.
 //  Copyright © 2018 Keshav. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
+final class HomeViewController: UIViewController {
 
-class HomeViewController: UIViewController {
-
-    let viewModel = ContactsViewModel()
-    
-    private var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorColor = UIColor.clear
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.sectionHeaderHeight = 5
-        tableView.estimatedRowHeight = 150
-        tableView.tableFooterView = UIView()
-        return tableView
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.flowLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = UIColor.white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        return collectionView
     }()
+
+    let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Contacts"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddContactView))
-        
-        let alertView = CustomAlertView()
-        alertView.udpateTitle(title: "Alert Title")
-        alertView.udpateDescription(description: " error description to show to user")
-        view.iOS_addSubview(alertView, margin: .zero)
-        alertView.isHidden = true
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
-        view.iOS_addSubview(tableView, margin: .zero)
-        viewModel.registerCellIdentifiers(to: tableView)
-        viewModel.fetchContactListFromFirebase(completion:{ [weak self] success in
-            if let weakSelf = self {
-                weakSelf.tableView.reloadData()
-            }
-        })
+        view.iOS_addSubview(collectionView)
+        viewModel.registerCells(for: collectionView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-extension HomeViewController {
-    @objc private func showAddContactView() {
-        performSegue(withIdentifier: "AddContactSegueId", sender: nil)
-    }
-}
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfItems
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = iOSProject.Text.Home.ScreenTitle
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewTableViewCell.identifier) as? HomeViewTableViewCell {
-            let contactItem = viewModel.contactItem(at: indexPath.row)
-            cell.style(with: contactItem)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = iOSProject.Text.Home.BackButtonTitle
+    }
+    
+}
+
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+ 
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfRows
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellIdentifier, for: indexPath) as? HomeViewCollectionViewCell {
+            cell.style(title: viewModel.cellTitle(at: indexPath.item))
             return cell
         }
-        return UITableViewCell()
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        performSegue(withIdentifier: viewModel.segueId(at: indexPath.item), sender: nil)
     }
 }
-
-

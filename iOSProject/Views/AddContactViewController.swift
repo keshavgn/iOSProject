@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddContactViewController: UITableViewController {
+final class AddContactViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!

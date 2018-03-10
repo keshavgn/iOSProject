@@ -13,8 +13,7 @@ protocol RegisterUserDelegate {
     func hideRegisterView()
 }
 
-class RegisterView: UIView, Cardable {
-    var maskedCarner: CACornerMask = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+final class RegisterView: UIView, Cardable {
     var delegate: RegisterUserDelegate?
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -57,6 +56,10 @@ class RegisterView: UIView, Cardable {
     
     override func layoutSubviews() {
         layoutCard()
+    }
+    
+    func maskedCarner() -> CACornerMask {
+        return [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
 }
 

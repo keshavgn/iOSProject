@@ -8,8 +8,9 @@
 
 import Firebase
 import UIKit
+import MobileCoreServices
 
-class ContactsViewModel {
+final class ContactsViewModel {
     private let ref = Database.database().reference(withPath: "contacts")  //"auth != null"
     let addContactViewCellIdentifiers = ["NameCellId", "AddressCellId", "PhoneNumberCellId"]
     
@@ -68,6 +69,26 @@ class ContactsViewModel {
     }
     
     func registerCellIdentifiers(to tableView: UITableView) {
-        tableView.register(UINib(nibName: HomeViewTableViewCell.className, bundle: nil), forCellReuseIdentifier: HomeViewTableViewCell.identifier)
+        tableView.register(UINib(nibName: ContactListTableViewCell.className, bundle: nil), forCellReuseIdentifier: ContactListTableViewCell.identifier)
+    }
+    
+    func dragItems(for indexPath: IndexPath) -> [UIDragItem] {
+        let contactName = "\(indexPath.row)"
+        
+        let data = contactName.data(using: .utf8)
+        let itemProvider = NSItemProvider()
+        
+        itemProvider.registerDataRepresentation(forTypeIdentifier: kUTTypePlainText as String, visibility: .all) { completion in
+            completion(data, nil)
+            return nil
+        }
+        
+        return [
+            UIDragItem(itemProvider: itemProvider)
+        ]
+    }
+    
+    func canHandle(_ session: UIDropSession) -> Bool {
+        return session.canLoadObjects(ofClass: NSString.self)
     }
 }

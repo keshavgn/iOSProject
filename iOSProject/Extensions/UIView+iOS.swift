@@ -26,7 +26,7 @@ extension UIView {
         static public let all: LayoutMarginOptions = [.left, .right, .top, .bottom]
     }
 
-    public func iOS_addSubview(_ subview: UIView, margin: UIEdgeInsets = .zero, onLayoutMargin: LayoutMarginOptions = [], at atIndex: Int? = nil) {
+    public func iOS_addSubview(_ subview: UIView, margin: UIEdgeInsets = .zero, onLayoutMargin: LayoutMarginOptions = [], maximumSubViewWidth: CGFloat? = nil, maximumSubViewHeight: CGFloat? = nil, at atIndex: Int? = nil) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         
         if let atIndex = atIndex {
@@ -69,6 +69,35 @@ extension UIView {
         subview.widthAnchor.constraint(equalToConstant: width).isActive = true
         subview.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
+    
+    public func iOS_addSubviewWithFixedSize(_ subview: UIView, margin: UIEdgeInsets = .zero, maximumSubViewWidth: CGFloat? = nil, maximumSubViewHeight: CGFloat? = nil, onLayoutMargin: LayoutMarginOptions = []) {
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(subview)
+        if let maximumSubViewWidth = maximumSubViewWidth {
+            subview.widthAnchor.constraint(equalToConstant: maximumSubViewWidth).isActive = true
+        }
+        
+        if onLayoutMargin.contains(.left) {
+            subview.leftAnchor.constraint(equalTo: leftAnchor, constant: margin.left).isActive = true
+        }
+        
+        if onLayoutMargin.contains(.right) {
+            rightAnchor.constraint(equalTo: subview.rightAnchor, constant: margin.right).isActive = true
+        }
+
+        if onLayoutMargin.contains(.top) {
+            subview.topAnchor.constraint(equalTo: topAnchor, constant: margin.top).isActive = true
+        }
+        
+        if onLayoutMargin.contains(.bottom) {
+            bottomAnchor.constraint(equalTo: subview.bottomAnchor, constant: margin.bottom).isActive = true
+        }
+        
+        if let maximumSubViewHeight = maximumSubViewHeight {
+            subview.heightAnchor.constraint(equalToConstant: maximumSubViewHeight).isActive = true
+        }
+    }
+
 }
 
 

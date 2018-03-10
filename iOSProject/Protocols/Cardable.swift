@@ -9,7 +9,6 @@
 import UIKit
 
 protocol Cardable {
-    var maskedCarner: CACornerMask {get set}
     var cornerRadius: CGFloat { get }
     func layoutCard()
 }
@@ -21,12 +20,16 @@ extension Cardable {
 }
 
 extension Cardable where Self: UIView {
+    func maskedCarner() -> CACornerMask {
+        return [.layerMinXMinYCorner,.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
     
     func layoutCard() {
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = cornerRadius
-        layer.maskedCorners = maskedCarner
+        layer.maskedCorners = maskedCarner()
+        layer.backgroundColor = UIColor.white.cgColor
         clipsToBounds = true
         
         layer.masksToBounds = false

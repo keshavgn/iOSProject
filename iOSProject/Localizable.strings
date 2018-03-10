@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  iOSProject
+
+  Created by Keshav on 10/03/18.
+  Copyright © 2018 Keshav. All rights reserved.
+*/
+
+/* Home screen */
+"home_screen_title" = "iOS Project";
+"home_screen_back_title" = "Home";
+
+/* Contacts screen */
+"contacts_screen_title" = "Contacts";
+"alert_delete_contact_title" = "Delete Contact";
+"alert_delete_contact_description" = "Are you sure, you want to delete contact";
