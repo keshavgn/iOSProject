@@ -30,12 +30,12 @@ final class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = iOSProject.Text.Home.ScreenTitle
+        title = Localized.homeScreenTitle
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        title = iOSProject.Text.Home.BackButtonTitle
+        title = Localized.homeScreenBackTitle
     }
     
 }

@@ -16,7 +16,7 @@ class FlightRowGroup: NSObject {
     @IBOutlet var statusLabel: WKInterfaceLabel!
     @IBOutlet var planeImage: WKInterfaceImage!
     
-    var flight: Flight? {
+    var flight: FlightDetail? {
         didSet {
             guard let flight = flight else { return }
 

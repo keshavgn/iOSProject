@@ -139,6 +139,7 @@ PODS:
   - SDWebImage (4.3.0):
     - SDWebImage/Core (= 4.3.0)
   - SDWebImage/Core (4.3.0)
+  - SwiftGen (5.2.1)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -152,6 +153,7 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - FirebaseUI/Phone
   - FirebaseUI/Twitter
+  - SwiftGen
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -179,9 +181,10 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SDWebImage: 6da6c8bca115addc4de8613362e1b15f66333825
+  SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 15e34b398c28fd82945fcd49f5db9465a4e48faa
+PODFILE CHECKSUM: 43646c7d3f91fa332a3376899023a73a2480e58a
 
 COCOAPODS: 1.4.0

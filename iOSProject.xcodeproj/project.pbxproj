@@ -10,7 +10,6 @@
 		07B70C5AF26BD0C0D6100BC2 /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB035BC092D410630AC543CD /* Pods_iOSProject.framework */; };
 		342A3C48F058C97075F18C9A /* Pods_iOSProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4DCC847D2BE32C095D0D2A /* Pods_iOSProjectTests.framework */; };
 		404079CA2053E774005A6600 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 404079C92053E774005A6600 /* Localizable.strings */; };
-		404079CC2053E859005A6600 /* Text+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404079CB2053E859005A6600 /* Text+iOS.swift */; };
 		404079D420540F57005A6600 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404079D320540F57005A6600 /* Messages.framework */; };
 		404079D720540F57005A6600 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404079D620540F57005A6600 /* MessagesViewController.swift */; };
 		404079DA20540F57005A6600 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404079D820540F57005A6600 /* MainInterface.storyboard */; };
@@ -22,6 +21,9 @@
 		404079E8205413FE005A6600 /* HomeViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E348FB204392600054C716 /* HomeViewCollectionViewCell.swift */; };
 		404079E9205413FE005A6600 /* HomeViewCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 40E348FC204392600054C716 /* HomeViewCollectionViewCell.xib */; };
 		404079EA205414C7005A6600 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4B3212045476D001428A3 /* Utility.swift */; };
+		40478E11205B9D2300161FCE /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 40478E10205B9D2300161FCE /* swiftgen.yml */; };
+		40478E15205B9E9200161FCE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40478E13205B9E9100161FCE /* Images.swift */; };
+		40478E16205B9E9200161FCE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40478E14205B9E9200161FCE /* Strings.swift */; };
 		405B24EB20328E5B00054469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405B24EA20328E5B00054469 /* AppDelegate.swift */; };
 		405B24F020328E5B00054469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 405B24EE20328E5B00054469 /* Main.storyboard */; };
 		405B24F320328E5B00054469 /* iOSProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 405B24F120328E5B00054469 /* iOSProject.xcdatamodeld */; };
@@ -149,13 +151,15 @@
 /* Begin PBXFileReference section */
 		0FC018ACFF2792203F32E2A5 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
 		404079C92053E774005A6600 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		404079CB2053E859005A6600 /* Text+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+iOS.swift"; sourceTree = "<group>"; };
 		404079D220540F57005A6600 /* iOSMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		404079D320540F57005A6600 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		404079D620540F57005A6600 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		404079D920540F57005A6600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		404079DB20540F57005A6600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404079DD20540F57005A6600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40478E10205B9D2300161FCE /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		40478E13205B9E9100161FCE /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		40478E14205B9E9200161FCE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		405B24E720328E5B00054469 /* iOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		405B24EA20328E5B00054469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		405B24EF20328E5B00054469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -263,6 +267,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E88F492E247F63C5A9B35689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -288,6 +299,29 @@
 				404079DD20540F57005A6600 /* Info.plist */,
 			);
 			path = iOSMessage;
+			sourceTree = "<group>";
+		};
+		40478E0C205B99BA00161FCE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				40478E10205B9D2300161FCE /* swiftgen.yml */,
+				405B24F620328E5B00054469 /* LaunchScreen.storyboard */,
+				40F4B31D20451FC9001428A3 /* GoogLeNetPlaces.mlmodel */,
+				40E7A3FF203868FF004F23DA /* iOSProject.entitlements */,
+				405B24F920328E5B00054469 /* Info.plist */,
+				404079C92053E774005A6600 /* Localizable.strings */,
+				40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		40478E12205B9E5B00161FCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				40478E13205B9E9100161FCE /* Images.swift */,
+				40478E14205B9E9200161FCE /* Strings.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		405B24DE20328E5A00054469 = {
@@ -329,14 +363,10 @@
 				40D94C96203CF9B900B71362 /* ViewModels */,
 				405B251E20328EED00054469 /* Database */,
 				405B251D20328ECD00054469 /* StoryBoards */,
+				40478E12205B9E5B00161FCE /* Resources */,
 				405B24EA20328E5B00054469 /* AppDelegate.swift */,
 				405B24F420328E5B00054469 /* Assets.xcassets */,
-				405B24F920328E5B00054469 /* Info.plist */,
-				404079C92053E774005A6600 /* Localizable.strings */,
-				40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */,
-				405B24F620328E5B00054469 /* LaunchScreen.storyboard */,
-				40F4B31D20451FC9001428A3 /* GoogLeNetPlaces.mlmodel */,
-				40E7A3FF203868FF004F23DA /* iOSProject.entitlements */,
+				40478E0C205B99BA00161FCE /* Others */,
 			);
 			path = iOSProject;
 			sourceTree = "<group>";
@@ -429,7 +459,6 @@
 				40E348EF20403C840054C716 /* CGRect+iOS.swift */,
 				40E348EE20403C840054C716 /* UIEdgeInsets+iOS.swift */,
 				40E348FF2043935D0054C716 /* UICollectionViewFlowLayout+iOS.swift */,
-				404079CB2053E859005A6600 /* Text+iOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +559,7 @@
 				E25B131EB539814DBFD29798 /* [CP] Copy Pods Resources */,
 				404079E420540F57005A6600 /* Embed App Extensions */,
 				40F23EDB20569335001FCA74 /* Embed Watch Content */,
+				40478E0D205B9BB400161FCE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -590,6 +620,7 @@
 			buildPhases = (
 				40F23EB420569335001FCA74 /* Resources */,
 				40F23ED920569335001FCA74 /* Embed App Extensions */,
+				E88F492E247F63C5A9B35689 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -701,6 +732,7 @@
 				40E348F520438A630054C716 /* ContactListTableViewCell.xib in Resources */,
 				405B24F820328E5B00054469 /* LaunchScreen.storyboard in Resources */,
 				40E348FE204392600054C716 /* HomeViewCollectionViewCell.xib in Resources */,
+				40478E11205B9D2300161FCE /* swiftgen.yml in Resources */,
 				404079CA2053E774005A6600 /* Localizable.strings in Resources */,
 				40D94C8D203AFE5A00B71362 /* GoogleService-Info.plist in Resources */,
 				405B24F520328E5B00054469 /* Assets.xcassets in Resources */,
@@ -772,6 +804,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSProjectUITests/Pods-iOSProjectUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		40478E0D205B9BB400161FCE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen";
 		};
 		7440C567F898DCAED40E2FF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -970,7 +1015,6 @@
 				40D94C99203CFB5700B71362 /* UIView+iOS.swift in Sources */,
 				405B24F320328E5B00054469 /* iOSProject.xcdatamodeld in Sources */,
 				40CFFF15203EF10E00AF7328 /* CardViewConfiguration.swift in Sources */,
-				404079CC2053E859005A6600 /* Text+iOS.swift in Sources */,
 				40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */,
 				40CFFF04203D385400AF7328 /* Cardable.swift in Sources */,
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
@@ -981,6 +1025,8 @@
 				40CFFF13203EF05400AF7328 /* CardViewLayoutable.swift in Sources */,
 				40E7A3F920384DF1004F23DA /* RegisterView.swift in Sources */,
 				40E348F720438B2F0054C716 /* HomeViewController.swift in Sources */,
+				40478E15205B9E9200161FCE /* Images.swift in Sources */,
+				40478E16205B9E9200161FCE /* Strings.swift in Sources */,
 				40F4B3222045476D001428A3 /* Utility.swift in Sources */,
 				40E348F9204392240054C716 /* HomeViewModel.swift in Sources */,
 				40E348F020403C840054C716 /* UIEdgeInsets+iOS.swift in Sources */,

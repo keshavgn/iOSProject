@@ -1,0 +1,12 @@
+strings:
+  paths: iOSProject/Localizable.strings
+  templateName: structured-swift4
+  output: iOSProject/Resources/Strings.swift
+  params:
+      enumName: Localized
+xcassets:
+  paths: iOSProject/Assets.xcassets
+  templateName: swift4
+  output: iOSProject/Resources/Images.swift
+  params:
+      enumName: Asset

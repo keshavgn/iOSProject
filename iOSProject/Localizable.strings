@@ -14,3 +14,6 @@
 "contacts_screen_title" = "Contacts";
 "alert_delete_contact_title" = "Delete Contact";
 "alert_delete_contact_description" = "Are you sure, you want to delete contact";
+
+/* Login scree */
+"login_screen_title" = "Login";

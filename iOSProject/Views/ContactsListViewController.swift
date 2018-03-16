@@ -42,14 +42,14 @@ final class ContactsListViewController: UIViewController {
     
     lazy private var deleteImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "trash_bin")
+        imageView.image = Asset.trashBin.image
         return imageView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = iOSProject.Text.Contacts.ScreenTitle
+        title = Localized.contactsScreenTitle
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddContactView))
         setupUI()
     }
@@ -143,8 +143,8 @@ extension ContactsListViewController: UITableViewDragDelegate, UIDropInteraction
                 for index in stringItems {
                     if let row = Int(index) {
                         weakSelf.alertView.tag = row
-                        weakSelf.alertView.udpateTitle(title: iOSProject.Text.Contacts.AlertTitle)
-                        weakSelf.alertView.udpateDescription(description: iOSProject.Text.Contacts.AlertDescription)
+                        weakSelf.alertView.udpateTitle(title: Localized.alertDeleteContactTitle)
+                        weakSelf.alertView.udpateDescription(description: Localized.alertDeleteContactDescription)
                     }
                 }
             }

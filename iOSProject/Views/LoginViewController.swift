@@ -33,6 +33,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = Localized.loginScreenTitle
         registerView.delegate = self
         registerViewTopConstraint.constant = view.frame.size.height - Constant.RegisterBottomMargin
         registerView.showOrHideSubViews(show: false)

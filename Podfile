@@ -13,6 +13,7 @@ target 'iOSProject' do
     pod 'FirebaseUI/Facebook'
     pod 'FirebaseUI/Twitter'
     pod 'FirebaseUI/Phone'
+    pod 'SwiftGen'
 
   target 'iOSProjectTests' do
     inherit! :search_paths
