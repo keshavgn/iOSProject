@@ -14,6 +14,7 @@ target 'iOSProject' do
     pod 'FirebaseUI/Twitter'
     pod 'FirebaseUI/Phone'
     pod 'SwiftGen'
+    pod 'HDAugmentedReality', '~> 2.3'
 
   target 'iOSProjectTests' do
     inherit! :search_paths

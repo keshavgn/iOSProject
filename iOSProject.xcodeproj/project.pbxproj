@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		07B70C5AF26BD0C0D6100BC2 /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB035BC092D410630AC543CD /* Pods_iOSProject.framework */; };
 		342A3C48F058C97075F18C9A /* Pods_iOSProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4DCC847D2BE32C095D0D2A /* Pods_iOSProjectTests.framework */; };
+		40315C8A20687366008E492E /* AugmentedRealityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8920687366008E492E /* AugmentedRealityViewController.swift */; };
+		40315C8D2068771E008E492E /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8B2068771E008E492E /* PlacesLoader.swift */; };
+		40315C8E2068771E008E492E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8C2068771E008E492E /* Place.swift */; };
+		4033DEE5206938DC00262511 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033DEE4206938DC00262511 /* PlaceAnnotation.swift */; };
+		4033DEE82069CABA00262511 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033DEE72069CABA00262511 /* AnnotationView.swift */; };
 		404079CA2053E774005A6600 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 404079C92053E774005A6600 /* Localizable.strings */; };
 		404079D420540F57005A6600 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404079D320540F57005A6600 /* Messages.framework */; };
 		404079D720540F57005A6600 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404079D620540F57005A6600 /* MessagesViewController.swift */; };
@@ -150,6 +155,11 @@
 
 /* Begin PBXFileReference section */
 		0FC018ACFF2792203F32E2A5 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
+		40315C8920687366008E492E /* AugmentedRealityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityViewController.swift; sourceTree = "<group>"; };
+		40315C8B2068771E008E492E /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
+		40315C8C2068771E008E492E /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		4033DEE4206938DC00262511 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		4033DEE72069CABA00262511 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		404079C92053E774005A6600 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		404079D220540F57005A6600 /* iOSMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		404079D320540F57005A6600 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
@@ -290,6 +300,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4033DEE62069CAA300262511 /* ARViews */ = {
+			isa = PBXGroup;
+			children = (
+				4033DEE72069CABA00262511 /* AnnotationView.swift */,
+			);
+			path = ARViews;
+			sourceTree = "<group>";
+		};
 		404079D520540F57005A6600 /* iOSMessage */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +427,7 @@
 		405B251F20328F0400054469 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4033DEE62069CAA300262511 /* ARViews */,
 				40E348FA204392370054C716 /* CollectionViewCells */,
 				40CFFF07203DAE9A00AF7328 /* TableViewCells */,
 				40E348F620438B2F0054C716 /* HomeViewController.swift */,
@@ -418,6 +437,7 @@
 				40D94C94203CF9A900B71362 /* CustomAlertView.swift */,
 				40CFFF10203E7AF500AF7328 /* AddContactViewController.swift */,
 				40E349012043E7F00054C716 /* MachineLearningViewController.swift */,
+				40315C8920687366008E492E /* AugmentedRealityViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,6 +496,9 @@
 			isa = PBXGroup;
 			children = (
 				40D94C92203C585E00B71362 /* ContactItem.swift */,
+				40315C8B2068771E008E492E /* PlacesLoader.swift */,
+				40315C8C2068771E008E492E /* Place.swift */,
+				4033DEE4206938DC00262511 /* PlaceAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -847,6 +870,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HDAugmentedReality/HDAugmentedReality.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -867,6 +891,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDAugmentedReality.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -1017,9 +1042,13 @@
 				40CFFF15203EF10E00AF7328 /* CardViewConfiguration.swift in Sources */,
 				40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */,
 				40CFFF04203D385400AF7328 /* Cardable.swift in Sources */,
+				40315C8A20687366008E492E /* AugmentedRealityViewController.swift in Sources */,
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
 				40D94C93203C585E00B71362 /* ContactItem.swift in Sources */,
 				40CFFF0D203E548400AF7328 /* CardLayoutTableViewCell.swift in Sources */,
+				4033DEE82069CABA00262511 /* AnnotationView.swift in Sources */,
+				4033DEE5206938DC00262511 /* PlaceAnnotation.swift in Sources */,
+				40315C8E2068771E008E492E /* Place.swift in Sources */,
 				40E348F120403C840054C716 /* CGRect+iOS.swift in Sources */,
 				40F4B31E20451FCA001428A3 /* GoogLeNetPlaces.mlmodel in Sources */,
 				40CFFF13203EF05400AF7328 /* CardViewLayoutable.swift in Sources */,
@@ -1028,6 +1057,7 @@
 				40478E15205B9E9200161FCE /* Images.swift in Sources */,
 				40478E16205B9E9200161FCE /* Strings.swift in Sources */,
 				40F4B3222045476D001428A3 /* Utility.swift in Sources */,
+				40315C8D2068771E008E492E /* PlacesLoader.swift in Sources */,
 				40E348F9204392240054C716 /* HomeViewModel.swift in Sources */,
 				40E348F020403C840054C716 /* UIEdgeInsets+iOS.swift in Sources */,
 				40E348F320438A0A0054C716 /* ContactsListViewController.swift in Sources */,

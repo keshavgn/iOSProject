@@ -64,5 +64,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need for AR</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need location for AR</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need for AT</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need for AR</string>
 </dict>
 </plist>

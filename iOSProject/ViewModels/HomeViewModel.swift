@@ -15,7 +15,7 @@ final class HomeViewModel {
     }
     
     private var homeViewCellNames: [String] {
-        return ["FireBase", "MachineLearning"]
+        return ["FireBase", "MachineLearning", "AR"]
     }
     
     var numberOfRows: Int {
