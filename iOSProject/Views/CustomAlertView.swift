@@ -16,7 +16,7 @@ protocol CustomAlertViewDelegate {
 final class CustomAlertView: UIView {
     
     var delegate: CustomAlertViewDelegate?
-    var shouldShowCancel = true
+    var shouldShowCancel = false
 
     private var contentView: AlertView = {
         let subView = AlertView()
@@ -30,6 +30,7 @@ final class CustomAlertView: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        isUserInteractionEnabled = false
         commonInit()
     }
     
@@ -59,10 +60,12 @@ extension CustomAlertView {
     }
     
     @objc private func doneButtonAction() {
+        isHidden = true
         delegate?.didTapDoneButton()
     }
     
     @objc private func cancelButtonAction() {
+        isHidden = true
         delegate?.didTapCancelButton()
     }
 }
@@ -81,6 +84,7 @@ final class AlertView: UIView, Cardable {
     var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 12)
@@ -117,7 +121,7 @@ final class AlertView: UIView, Cardable {
         return button
     }()
     
-    var shouldShowCancel = true
+    var shouldShowCancel = false
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -131,11 +135,11 @@ final class AlertView: UIView, Cardable {
     
     private func commonInit() {
         backgroundColor = UIColor.white
-        setupUI()
     }
     
     override func layoutSubviews() {
         layoutCard()
+        setupUI()
     }
 }
 

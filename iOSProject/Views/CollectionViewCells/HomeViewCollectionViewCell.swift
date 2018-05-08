@@ -8,9 +8,7 @@
 
 import UIKit
 
-final class HomeViewCollectionViewCell: UICollectionViewCell, Cardable {
-
-    static let identifier = "HomeViewCollectionViewCellIdentifier"
+final class HomeViewCollectionViewCell: UICollectionViewCell, Cardable, Identifiable {
     
     @IBOutlet weak var titleLabel: UILabel!
     

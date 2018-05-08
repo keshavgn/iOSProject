@@ -14,10 +14,15 @@
 			<key>orderHint</key>
 			<integer>26</integer>
 		</dict>
-		<key>iOSProject.xcscheme_^#shared#^_</key>
+		<key>iOSProject.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>iOSSpotlight.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>31</integer>
 		</dict>
 		<key>iOSToday.xcscheme</key>
 		<dict>

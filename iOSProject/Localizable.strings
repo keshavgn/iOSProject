@@ -17,3 +17,11 @@
 
 /* Login scree */
 "login_screen_title" = "Login";
+"login_screen_login_fail" = "Login Failed";
+"login_screen_register_fail" = "Register Failed";
+
+/* ML screen */
+"answer_label_default" = "detecting scene...";
+"camera_button_title" = "Camera";
+"gallery_button_title" = "Gallery";
+"cancel_button_title" = "Cancel";

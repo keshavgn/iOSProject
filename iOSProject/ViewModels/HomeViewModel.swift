@@ -9,10 +9,6 @@
 import UIKit
 
 final class HomeViewModel {
-
-    var cellIdentifier: String {
-        return "HomeViewCollectionViewCellIdentifier"
-    }
     
     private var homeViewCellNames: [String] {
         return ["FireBase", "MachineLearning", "AR"]
@@ -31,7 +27,7 @@ final class HomeViewModel {
     }
     
     func registerCells(for collectionView: UICollectionView) {
-        collectionView.register(UINib(nibName: HomeViewCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(UINib(nibName: HomeViewCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier: HomeViewCollectionViewCell.identifier)
     }
 
 }

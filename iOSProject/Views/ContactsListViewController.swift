@@ -10,9 +10,18 @@ import UIKit
 import Firebase
 import MobileCoreServices
 
-final class ContactsListViewController: UIViewController {
+final class ContactsListViewController: BaseViewController {
 
-    let viewModel = ContactsViewModel()
+    private struct Constant {
+        static let addContactSegueId = "AddContactSegueId"
+        static let sectionHeaderHeight: CGFloat = 5
+        static let estimatedRowHeight: CGFloat = 150
+        static let cardEdgeInsets = UIEdgeInsets(top: 4, left: 12, bottom: 4, right: 12)
+        static let contentEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
+    }
+    
+    private let viewModel = ContactsViewModel()
+    private let interactor = Interactor()
     lazy private var alertView: CustomAlertView = {
         let alertView = CustomAlertView()
         alertView.delegate = self
@@ -23,8 +32,8 @@ final class ContactsListViewController: UIViewController {
         let tableView = UITableView()
         tableView.separatorColor = UIColor.clear
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.sectionHeaderHeight = 5
-        tableView.estimatedRowHeight = 150
+        tableView.sectionHeaderHeight = Constant.sectionHeaderHeight
+        tableView.estimatedRowHeight = Constant.estimatedRowHeight
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,11 +54,12 @@ final class ContactsListViewController: UIViewController {
         imageView.image = Asset.trashBin.image
         return imageView
     }()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = Localized.contactsScreenTitle
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(userLogout))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddContactView))
         setupUI()
     }
@@ -74,11 +84,26 @@ final class ContactsListViewController: UIViewController {
     private func showDropItemView(show: Bool) {
         itemDropView.isHidden = !show
     }
+    
+    private func showContactDetailView(index: Int) {
+        if let contactDetailsViewController = UIStoryboard.iOS_ContactDetailsViewController {
+            contactDetailsViewController.transitioningDelegate = self
+            contactDetailsViewController.interactor = interactor
+            contactDetailsViewController.modalPresentationStyle = .custom
+            contactDetailsViewController.contact = viewModel.contactItem(at: index)
+            present(contactDetailsViewController, animated: true, completion: nil)
+        }
+    }
+    
+    @objc private func userLogout() {
+        UserViewModel.logoutUser()
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension ContactsListViewController {
     @objc private func showAddContactView() {
-        performSegue(withIdentifier: "AddContactSegueId", sender: nil)
+        performSegue(withIdentifier: Constant.addContactSegueId, sender: nil)
     }
 }
 
@@ -93,11 +118,16 @@ extension ContactsListViewController: UITableViewDataSource, UITableViewDelegate
             let contactItem = viewModel.contactItem(at: indexPath.row)
             cell.style(with: contactItem)
             cell.position = CardViewLayer.CardViewPosition(row: indexPath.row, numberOfRows: viewModel.numberOfItems)
-            cell.cardEdgeInsets = UIEdgeInsets(top: 4, left: 12, bottom: 4, right: 12)
-            cell.contentEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
+            cell.cardEdgeInsets = Constant.cardEdgeInsets
+            cell.contentEdgeInsets = Constant.contentEdgeInsets
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        showContactDetailView(index: indexPath.row)
     }
 }
 
@@ -162,4 +192,13 @@ extension ContactsListViewController: CustomAlertViewDelegate {
     }
 }
 
+extension ContactsListViewController: UIViewControllerTransitioningDelegate {
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissAnimator()
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
+    }
+}
 

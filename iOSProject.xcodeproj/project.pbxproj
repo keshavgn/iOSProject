@@ -14,6 +14,9 @@
 		40315C8E2068771E008E492E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8C2068771E008E492E /* Place.swift */; };
 		4033DEE5206938DC00262511 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033DEE4206938DC00262511 /* PlaceAnnotation.swift */; };
 		4033DEE82069CABA00262511 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4033DEE72069CABA00262511 /* AnnotationView.swift */; };
+		403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EE31E206FC7100051E627 /* ContactDetailsViewController.swift */; };
+		403EE3212070B0D10051E627 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EE3202070B0D10051E627 /* DismissAnimator.swift */; };
+		403EE3232070BCD50051E627 /* StoryBoard+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */; };
 		404079CA2053E774005A6600 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 404079C92053E774005A6600 /* Localizable.strings */; };
 		404079D420540F57005A6600 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404079D320540F57005A6600 /* Messages.framework */; };
 		404079D720540F57005A6600 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404079D620540F57005A6600 /* MessagesViewController.swift */; };
@@ -38,6 +41,12 @@
 		405B250E20328E5B00054469 /* iOSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405B250D20328E5B00054469 /* iOSProjectUITests.swift */; };
 		405B25252032E23900054469 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405B25242032E23900054469 /* CoreDataManager.swift */; };
 		405B25272032E71C00054469 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405B25262032E71C00054469 /* LoginViewController.swift */; };
+		4069CC692080F69C00FB33BF /* IndexRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC682080F69C00FB33BF /* IndexRequestHandler.swift */; };
+		4069CC6D2080F69C00FB33BF /* iOSSpotlight.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4069CC662080F69C00FB33BF /* iOSSpotlight.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC712082298600FB33BF /* ContactsSearch.swift */; };
+		4069CC7420822D8200FB33BF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7320822D8200FB33BF /* Setting.swift */; };
+		4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */; };
+		4069CC7820824C6700FB33BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7720824C6700FB33BF /* BaseViewController.swift */; };
 		4082DD1D206A799A00B0AECD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082DD1C206A799900B0AECD /* NotificationCenter.framework */; };
 		4082DD20206A799A00B0AECD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4082DD1F206A799A00B0AECD /* TodayViewController.swift */; };
 		4082DD23206A799A00B0AECD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4082DD21206A799A00B0AECD /* MainInterface.storyboard */; };
@@ -107,6 +116,13 @@
 			remoteGlobalIDString = 405B24E620328E5B00054469;
 			remoteInfo = iOSProject;
 		};
+		4069CC6B2080F69C00FB33BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 405B24DF20328E5B00054469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4069CC652080F69C00FB33BF;
+			remoteInfo = iOSSpotlight;
+		};
 		4082DD25206A799A00B0AECD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 405B24DF20328E5B00054469 /* Project object */;
@@ -139,6 +155,7 @@
 			files = (
 				4082DD27206A799A00B0AECD /* iOSToday.appex in Embed App Extensions */,
 				404079E020540F57005A6600 /* iOSMessage.appex in Embed App Extensions */,
+				4069CC6D2080F69C00FB33BF /* iOSSpotlight.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +191,9 @@
 		40315C8C2068771E008E492E /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		4033DEE4206938DC00262511 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		4033DEE72069CABA00262511 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		403EE31E206FC7100051E627 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		403EE3202070B0D10051E627 /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryBoard+iOS.swift"; sourceTree = "<group>"; };
 		404079C92053E774005A6600 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		404079D220540F57005A6600 /* iOSMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		404079D320540F57005A6600 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
@@ -199,6 +219,14 @@
 		405B250F20328E5B00054469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405B25242032E23900054469 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		405B25262032E71C00054469 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4069CC662080F69C00FB33BF /* iOSSpotlight.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSSpotlight.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4069CC682080F69C00FB33BF /* IndexRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRequestHandler.swift; sourceTree = "<group>"; };
+		4069CC6A2080F69C00FB33BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4069CC712082298600FB33BF /* ContactsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSearch.swift; sourceTree = "<group>"; };
+		4069CC7320822D8200FB33BF /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		4069CC7720824C6700FB33BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4069CC7A2082ED5A00FB33BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4082DD1B206A799900B0AECD /* iOSToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4082DD1C206A799900B0AECD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4082DD1F206A799A00B0AECD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3431D2BBED97BD633F9D4E /* Pods_iOSProjectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4069CC632080F69C00FB33BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +415,7 @@
 				40F23EB720569335001FCA74 /* iOSWatch */,
 				40F23EC620569335001FCA74 /* iOSWatch Extension */,
 				4082DD1E206A799A00B0AECD /* iOSToday */,
+				4069CC672080F69C00FB33BF /* iOSSpotlight */,
 				405B24E820328E5B00054469 /* Products */,
 				0ED3D692BCD0DF8B93579CC1 /* Pods */,
 				95DA1588F5CA6121D186D9D0 /* Frameworks */,
@@ -396,6 +432,7 @@
 				40F23EB620569335001FCA74 /* iOSWatch.app */,
 				40F23EC220569335001FCA74 /* iOSWatch Extension.appex */,
 				4082DD1B206A799900B0AECD /* iOSToday.appex */,
+				4069CC662080F69C00FB33BF /* iOSSpotlight.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -460,16 +497,28 @@
 				4033DEE62069CAA300262511 /* ARViews */,
 				40E348FA204392370054C716 /* CollectionViewCells */,
 				40CFFF07203DAE9A00AF7328 /* TableViewCells */,
+				4069CC7720824C6700FB33BF /* BaseViewController.swift */,
 				40E348F620438B2F0054C716 /* HomeViewController.swift */,
 				40E348F220438A0A0054C716 /* ContactsListViewController.swift */,
+				40CFFF10203E7AF500AF7328 /* AddContactViewController.swift */,
+				403EE31E206FC7100051E627 /* ContactDetailsViewController.swift */,
 				405B25262032E71C00054469 /* LoginViewController.swift */,
 				40E7A3F820384DF1004F23DA /* RegisterView.swift */,
 				40D94C94203CF9A900B71362 /* CustomAlertView.swift */,
-				40CFFF10203E7AF500AF7328 /* AddContactViewController.swift */,
 				40E349012043E7F00054C716 /* MachineLearningViewController.swift */,
 				40315C8920687366008E492E /* AugmentedRealityViewController.swift */,
+				4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4069CC672080F69C00FB33BF /* iOSSpotlight */ = {
+			isa = PBXGroup;
+			children = (
+				4069CC682080F69C00FB33BF /* IndexRequestHandler.swift */,
+				4069CC6A2080F69C00FB33BF /* Info.plist */,
+			);
+			path = iOSSpotlight;
 			sourceTree = "<group>";
 		};
 		4082DD1E206A799A00B0AECD /* iOSToday */ = {
@@ -520,6 +569,7 @@
 				40E348EE20403C840054C716 /* UIEdgeInsets+iOS.swift */,
 				40E348FF2043935D0054C716 /* UICollectionViewFlowLayout+iOS.swift */,
 				4082DD57206D0C3100B0AECD /* Date+iOS.swift */,
+				403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -536,10 +586,13 @@
 		40E7A3FC20385399004F23DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4069CC7320822D8200FB33BF /* Setting.swift */,
 				40D94C92203C585E00B71362 /* ContactItem.swift */,
 				40315C8B2068771E008E492E /* PlacesLoader.swift */,
 				40315C8C2068771E008E492E /* Place.swift */,
 				4033DEE4206938DC00262511 /* PlaceAnnotation.swift */,
+				403EE3202070B0D10051E627 /* DismissAnimator.swift */,
+				4069CC712082298600FB33BF /* ContactsSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,6 +685,7 @@
 				404079DF20540F57005A6600 /* PBXTargetDependency */,
 				40F23ED220569335001FCA74 /* PBXTargetDependency */,
 				4082DD26206A799A00B0AECD /* PBXTargetDependency */,
+				4069CC6C2080F69C00FB33BF /* PBXTargetDependency */,
 			);
 			name = iOSProject;
 			productName = iOSProject;
@@ -679,6 +733,23 @@
 			productName = iOSProjectUITests;
 			productReference = 405B250920328E5B00054469 /* iOSProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4069CC652080F69C00FB33BF /* iOSSpotlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4069CC702080F69C00FB33BF /* Build configuration list for PBXNativeTarget "iOSSpotlight" */;
+			buildPhases = (
+				4069CC622080F69C00FB33BF /* Sources */,
+				4069CC632080F69C00FB33BF /* Frameworks */,
+				4069CC642080F69C00FB33BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSSpotlight;
+			productName = iOSSpotlight;
+			productReference = 4069CC662080F69C00FB33BF /* iOSSpotlight.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		4082DD1A206A799900B0AECD /* iOSToday */ = {
 			isa = PBXNativeTarget;
@@ -765,6 +836,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 405B24E620328E5B00054469;
 					};
+					4069CC652080F69C00FB33BF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					4082DD1A206A799900B0AECD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -799,6 +874,7 @@
 				40F23EB520569335001FCA74 /* iOSWatch */,
 				40F23EC120569335001FCA74 /* iOSWatch Extension */,
 				4082DD1A206A799900B0AECD /* iOSToday */,
+				4069CC652080F69C00FB33BF /* iOSSpotlight */,
 			);
 		};
 /* End PBXProject section */
@@ -836,6 +912,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		405B250720328E5B00054469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4069CC642080F69C00FB33BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1110,14 +1193,21 @@
 				40CFFF06203DABE400AF7328 /* ContactsViewModel.swift in Sources */,
 				40E7A4012038FD93004F23DA /* UserViewModel.swift in Sources */,
 				40E348FD204392600054C716 /* HomeViewCollectionViewCell.swift in Sources */,
+				403EE3212070B0D10051E627 /* DismissAnimator.swift in Sources */,
 				40D94C99203CFB5700B71362 /* UIView+iOS.swift in Sources */,
+				4069CC7820824C6700FB33BF /* BaseViewController.swift in Sources */,
 				405B24F320328E5B00054469 /* iOSProject.xcdatamodeld in Sources */,
 				40CFFF15203EF10E00AF7328 /* CardViewConfiguration.swift in Sources */,
 				40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */,
 				4082DD58206D0C3200B0AECD /* Date+iOS.swift in Sources */,
 				40CFFF04203D385400AF7328 /* Cardable.swift in Sources */,
 				40315C8A20687366008E492E /* AugmentedRealityViewController.swift in Sources */,
+				403EE3232070BCD50051E627 /* StoryBoard+iOS.swift in Sources */,
+				4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */,
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
+				4069CC7420822D8200FB33BF /* Setting.swift in Sources */,
+				403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */,
+				4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */,
 				40D94C93203C585E00B71362 /* ContactItem.swift in Sources */,
 				40CFFF0D203E548400AF7328 /* CardLayoutTableViewCell.swift in Sources */,
 				4033DEE82069CABA00262511 /* AnnotationView.swift in Sources */,
@@ -1153,6 +1243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				405B250E20328E5B00054469 /* iOSProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4069CC622080F69C00FB33BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4069CC692080F69C00FB33BF /* IndexRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,6 +1295,11 @@
 			target = 405B24E620328E5B00054469 /* iOSProject */;
 			targetProxy = 405B250A20328E5B00054469 /* PBXContainerItemProxy */;
 		};
+		4069CC6C2080F69C00FB33BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4069CC652080F69C00FB33BF /* iOSSpotlight */;
+			targetProxy = 4069CC6B2080F69C00FB33BF /* PBXContainerItemProxy */;
+		};
 		4082DD26206A799A00B0AECD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4082DD1A206A799900B0AECD /* iOSToday */;
@@ -1227,6 +1330,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				405B24EF20328E5B00054469 /* Base */,
+				4069CC7A2082ED5A00FB33BF /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1263,10 +1367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = iOSMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.iOSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1279,10 +1383,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = iOSMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.iOSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1406,11 +1510,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iOSProject/iOSProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = iOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1425,7 +1529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iOSProject/iOSProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1441,7 +1545,7 @@
 				INFOPLIST_FILE = iOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1518,14 +1622,44 @@
 			};
 			name = Release;
 		};
+		4069CC6E2080F69C00FB33BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				INFOPLIST_FILE = iOSSpotlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSSpotlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4069CC6F2080F69C00FB33BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				INFOPLIST_FILE = iOSSpotlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSSpotlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4082DD28206A799A00B0AECD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = iOSToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.iOSToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1537,10 +1671,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = iOSToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.iOSToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1554,10 +1688,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				IBSC_MODULE = iOSWatch_Extension;
 				INFOPLIST_FILE = iOSWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1573,10 +1707,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				IBSC_MODULE = iOSWatch_Extension;
 				INFOPLIST_FILE = iOSWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1591,10 +1725,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = "iOSWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1609,10 +1743,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZE659Q7F3;
+				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				INFOPLIST_FILE = "iOSWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshav.iOSProject.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1666,6 +1800,15 @@
 			buildConfigurations = (
 				405B251920328E5B00054469 /* Debug */,
 				405B251A20328E5B00054469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4069CC702080F69C00FB33BF /* Build configuration list for PBXNativeTarget "iOSSpotlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4069CC6E2080F69C00FB33BF /* Debug */,
+				4069CC6F2080F69C00FB33BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

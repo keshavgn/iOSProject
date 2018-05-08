@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "6CD-YN-WPc"; */
+"6CD-YN-WPc.text" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "DCH-V0-yIW"; */
+"DCH-V0-yIW.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "EHj-gh-OOC"; */
+"EHj-gh-OOC.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password"; ObjectID = "FGz-u2-iJR"; */
+"FGz-u2-iJR.normalTitle" = "Forgot Password";
+
+/* Class = "UIButton"; normalTitle = "Camera"; ObjectID = "GDM-au-xj7"; */
+"GDM-au-xj7.normalTitle" = "Camera";
+
+/* Class = "UILabel"; text = "Phone No"; ObjectID = "HcW-Pi-VmJ"; */
+"HcW-Pi-VmJ.text" = "Phone No";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "NGd-dU-g3o"; */
+"NGd-dU-g3o.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "VEn-Eq-Rzt"; */
+"VEn-Eq-Rzt.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "WNS-VZ-tw9"; */
+"WNS-VZ-tw9.text" = "Address";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "b0l-wt-0vg"; */
+"b0l-wt-0vg.normalTitle" = "Submit";
+
+/* Class = "UINavigationItem"; title = "New Contact"; ObjectID = "c8s-Zt-g1m"; */
+"c8s-Zt-g1m.title" = "New Contact";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "cYy-C7-do0"; */
+"cYy-C7-do0.text" = "Name";
+
+/* Class = "UILabel"; text = "Enter registered email id to send the reset password link"; ObjectID = "f9S-tJ-HO1"; */
+"f9S-tJ-HO1.text" = "Enter registered email id to send the reset password link";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jgs-gZ-DRi"; */
+"jgs-gZ-DRi.text" = "Label";
+
+/* Class = "UILabel"; text = "Reset password link is sent to your email, please proceed with the link."; ObjectID = "kMG-zQ-pJ0"; */
+"kMG-zQ-pJ0.text" = "Reset password link is sent to your email, please proceed with the link.";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "pp6-qX-c6h"; */
+"pp6-qX-c6h.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Web Login"; ObjectID = "tNv-Lc-zQ7"; */
+"tNv-Lc-zQ7.normalTitle" = "Web Login";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "wqb-bL-Kqe"; */
+"wqb-bL-Kqe.placeholder" = "Password";

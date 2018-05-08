@@ -15,10 +15,10 @@ import FirebaseFacebookAuthUI
 import FirebaseTwitterAuthUI
 import FirebasePhoneAuthUI
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: BaseViewController {
     
     struct Constant {
-        static let RegisterBottomMargin: CGFloat = 100
+        static let RegisterBottomMargin: CGFloat = 120
         static let HomeViewSegue = "HomeViewSegue"
     }
     
@@ -34,6 +34,8 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         title = Localized.loginScreenTitle
+        emailTextField.text = "keshavgn@gmail.com"
+        passwordTextField.text = "aaaaaa"
         registerView.delegate = self
         registerViewTopConstraint.constant = view.frame.size.height - Constant.RegisterBottomMargin
         registerView.showOrHideSubViews(show: false)
@@ -41,11 +43,12 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func nativeLogin(_ sender: Any) {
-        performSegue(withIdentifier: Constant.HomeViewSegue, sender: nil)
-        return
         viewModel.loginUser(email: emailTextField.text!, password: passwordTextField.text!, completion: { [weak self](success, message) in
-            if let weakSelf = self, success == true {
+            guard let weakSelf = self else { return }
+            if success == true {
                 weakSelf.performSegue(withIdentifier: Constant.HomeViewSegue, sender: nil)
+            } else {
+                weakSelf.showAlert(title: Localized.loginScreenLoginFail, message: message)
             }
         })
         
@@ -83,17 +86,19 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController {
     
+    private func animationView(completion: ((Bool)->(Void))?) {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            completion?(true)
+        })
+    }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchPoint = touch.location(in: self.view)
-            if touchPoint.y > 150 && !isShowingRegister {
-                registerViewTopConstraint.constant = touchPoint.y - 40
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.view.layoutIfNeeded()
-                })
-            } else {
-                showOrHideSubViews(show: true)
-            }
+            registerViewTopConstraint.constant = touchPoint.y - 40
+            animationView(completion: nil)
         }
     }
     
@@ -106,13 +111,11 @@ extension LoginViewController {
     }
     
     private func updateRegisterView(touches: Set<UITouch>) {
-        if let touch = touches.first, isShowingRegister == false {
+        if let touch = touches.first {
             let touchPoint = touch.location(in: self.view)
-            if touchPoint.y < 500 {
+            if touchPoint.y < 400 {
                 registerViewTopConstraint.constant = Constant.RegisterBottomMargin
-                UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
-                    self.view.layoutIfNeeded()
-                }, completion: { _ in
+                animationView(completion: { _ in
                     self.showOrHideSubViews(show: true)
                 })
             } else {
@@ -126,20 +129,22 @@ extension LoginViewController: FUIAuthDelegate, RegisterUserDelegate {
     
     func registerNewUser(email: String, password: String) {
         viewModel.registerNewUser(email: email, password: password, completion: { [weak self] (success, message) in
-            if let weakSelf = self, success == true {
+            guard let weakSelf = self else { return }
+            if success == true {
                 weakSelf.nativeLogin(weakSelf)
+            } else {
+                weakSelf.showAlert(title: Localized.loginScreenRegisterFail, message: message)
             }
         })
     }
     
     func hideRegisterView() {
         registerViewTopConstraint.constant = view.frame.size.height - Constant.RegisterBottomMargin
-        UIView.animate(withDuration: 1, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: { _ in
+        animationView(completion: { _ in
             self.showOrHideSubViews(show: false)
         })
     }
+    
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if let errors = error {
             print(errors)

@@ -15,7 +15,9 @@ final class MachineLearningViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var camaraBarButtonItem: UIBarButtonItem!
     
-    let vowels: [Character] = ["a", "e", "i", "o", "u"]
+    private struct Constant {
+        static let vowels: [Character] = ["a", "e", "i", "o", "u"]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ final class MachineLearningViewController: UIViewController {
     
     @IBAction func openCameraOrPhotosApp(_ sender: Any) {
         let actionSheetViewController = UIAlertController()
-        let cameraButton = UIAlertAction(title: "Camera", style: .default, handler: { [weak self] _ in
+        let cameraButton = UIAlertAction(title: Localized.cameraButtonTitle, style: .default, handler: { [weak self] _ in
             if let weakSelf = self {
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePickerController = UIImagePickerController()
@@ -36,7 +38,7 @@ final class MachineLearningViewController: UIViewController {
             }
         })
         actionSheetViewController.addAction(cameraButton)
-        let galleryButton = UIAlertAction(title: "Gallery", style: .default, handler: { [weak self] _ in
+        let galleryButton = UIAlertAction(title: Localized.galleryButtonTitle, style: .default, handler: { [weak self] _ in
             if let weakSelf = self {
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePickerController = UIImagePickerController()
@@ -48,7 +50,7 @@ final class MachineLearningViewController: UIViewController {
             }
         })
         actionSheetViewController.addAction(galleryButton)
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] _ in
+        let cancelButton = UIAlertAction(title: Localized.cancelButtonTitle, style: .cancel, handler: { [weak self] _ in
             if let weakSelf = self {
                 weakSelf.dismiss(animated: true, completion: nil)
             }
@@ -62,18 +64,13 @@ final class MachineLearningViewController: UIViewController {
 extension MachineLearningViewController {
     
     func detectScene(image: CIImage) {
-        answerLabel.text = "detecting scene..."
+        answerLabel.text = Localized.answerLabelDefault
         
-        guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else {
-            fatalError("can't load Places ML model")
-        }
+        guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else { return }
         let request = VNCoreMLRequest(model: model) { [weak self] request, error in
-            guard let results = request.results as? [VNClassificationObservation],
-                let topResult = results.first else {
-                    fatalError("unexpected result type from VNCoreMLRequest")
-            }
+            guard let results = request.results as? [VNClassificationObservation], let topResult = results.first else { return }
             
-            let article = (self?.vowels.contains(topResult.identifier.first!))! ? "an" : "a"
+            let article = Constant.vowels.contains(topResult.identifier.first!) ? "an" : "a"
             DispatchQueue.main.async { [weak self] in
                 self?.answerLabel.text = "\(Int(topResult.confidence * 100))% it's \(article) \(topResult.identifier)"
             }
@@ -94,14 +91,9 @@ extension MachineLearningViewController: UINavigationControllerDelegate, UIImage
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         dismiss(animated: true)
         
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("couldn't load image from Photos")
-        }
-        
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         scene.image = image
-        guard let ciImage = CIImage(image: image) else {
-            fatalError("couldn't convert UIImage to CIImage")
-        }
+        guard let ciImage = CIImage(image: image) else { return }
         detectScene(image: ciImage)
     }
 }

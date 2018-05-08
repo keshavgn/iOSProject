@@ -23,6 +23,12 @@ final class AugmentedRealityViewController: UIViewController {
         static let formattedPhoneNumber = "formatted_phone_number"
         static let result = "result"
         static let website = "website"
+        static let horizontalAccuracy: Double = 100
+        static let delta: Double =  0.014
+        static let radius = 1000
+        static let anotationViewFrame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        static let maxVisibleAnnotations = 30
+        static let headingFilterFactor: Double = 0.05
     }
     
     @IBOutlet weak var mapView: MKMapView!
@@ -49,8 +55,8 @@ final class AugmentedRealityViewController: UIViewController {
     @IBAction func cameraAction(_ sender: Any) {
         arViewController = ARViewController()
         arViewController.dataSource = self
-        arViewController.presenter.maxVisibleAnnotations = 30
-        arViewController.trackingManager.headingFilterFactor = 0.05
+        arViewController.presenter.maxVisibleAnnotations = Constant.maxVisibleAnnotations
+        arViewController.trackingManager.headingFilterFactor = Constant.headingFilterFactor
         arViewController.setAnnotations(places)
         self.present(arViewController, animated: true, completion: nil)
     }
@@ -61,16 +67,16 @@ extension AugmentedRealityViewController: CLLocationManagerDelegate {
         if locations.count > 0 {
             guard let location = locations.last else { return }
             
-            if location.horizontalAccuracy < 100 {
+            if location.horizontalAccuracy < Constant.horizontalAccuracy {
                 manager.stopUpdatingLocation()
-                let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
+                let span = MKCoordinateSpan(latitudeDelta: Constant.delta, longitudeDelta: Constant.delta)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
                 mapView.region = region
                 
                 if !startedLoadingPOIs {
                     startedLoadingPOIs = true
                     let loader = PlacesLoader()
-                    loader.loadPOIS(location: location, radius: 1000) { [weak self] placesDict, error in
+                    loader.loadPOIS(location: location, radius: Constant.radius) { [weak self] placesDict, error in
                         if let dict = placesDict {
                             guard let placesArray = dict.object(forKey: Constant.results) as? [NSDictionary]  else { return }
                             for placeDict in placesArray {
@@ -101,7 +107,7 @@ extension AugmentedRealityViewController: ARDataSource {
         let annotationView = AnnotationView()
         annotationView.annotation = viewForAnnotation
         annotationView.delegate = self
-        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        annotationView.frame = Constant.anotationViewFrame
         return annotationView
     }
 }

@@ -110,3 +110,15 @@ extension UIView {
         return String(describing: self)
     }
 }
+
+protocol Identifiable {
+    static var identifier: String { get }
+}
+
+extension Identifiable where Self: UIView {
+    static var identifier: String {
+        get {
+            return (NSStringFromClass(classForCoder()).components(separatedBy: ".").last ?? "") + "Identifier"
+        }
+    }
+}

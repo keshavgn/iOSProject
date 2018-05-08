@@ -19,7 +19,6 @@ final class RegisterView: UIView, Cardable {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var upArrowImageView: UIImageView!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var spaceView: UIView!
     
     public override init(frame: CGRect) {
@@ -38,20 +37,11 @@ final class RegisterView: UIView, Cardable {
     @IBAction func registerNewUser(_ sender: Any) {
         delegate?.registerNewUser(email: emailTextField.text!, password: passwordTextField.text!)
     }
-    
-    @IBAction func closeButtonAction(_ sender: Any) {
-        delegate?.hideRegisterView()
-    }
-    
+        
     func showOrHideSubViews(show: Bool) {
-        closeButton.isHidden = !show
         upArrowImageView.isHidden = show
         spaceView.isHidden = !show
-        
-        UIView.animate(withDuration: 0.6, animations: {
-            self.closeButton.alpha = show ? 1 : 0
-            self.upArrowImageView.alpha = !show ? 0.4 : 0
-        })
+        upArrowImageView.alpha = !show ? 0.4 : 0
     }
     
     override func layoutSubviews() {
