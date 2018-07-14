@@ -130,6 +130,7 @@ PODS:
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
   - HDAugmentedReality (2.3.0)
+  - Keys (1.0.1)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -153,6 +154,7 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - FirebaseUI/Phone
   - HDAugmentedReality (~> 2.3)
+  - Keys (from `Pods/CocoaPodsKeys`)
   - SwiftGen
 
 SPEC REPOS:
@@ -187,6 +189,10 @@ SPEC REPOS:
     - TwitterCore
     - TwitterKit
 
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
@@ -210,6 +216,7 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   HDAugmentedReality: 2ea96cb488aa81298e6557a897b4252d62e55843
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
@@ -218,6 +225,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: c1aa669517a943e0cb5b964942461b0236c593f8
+PODFILE CHECKSUM: 9ccfc236adaebb5abecc5586ee8687e6ad3f1ac2
 
 COCOAPODS: 1.5.2

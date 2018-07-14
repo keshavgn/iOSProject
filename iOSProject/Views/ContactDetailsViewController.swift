@@ -29,13 +29,12 @@ class ContactDetailsViewController: UIViewController {
         view.addGestureRecognizer(panGestureRed)
         
         if let activity = contact?.userActivity {
-            switch Setting.searchIndexingPreference {
+            switch Settings.searchIndexingPreference {
             case .Disabled:
                 activity.isEligibleForSearch = false
             case .ViewedRecords:
                 activity.isEligibleForSearch = true
             }
-            activity.isEligibleForSearch = true
             userActivity = activity
         }
     }

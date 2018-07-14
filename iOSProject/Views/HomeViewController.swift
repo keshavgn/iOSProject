@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Keys
 
 final class HomeViewController: UIViewController {
 
@@ -20,6 +21,7 @@ final class HomeViewController: UIViewController {
     }()
 
     let viewModel = HomeViewModel()
+    let keys = IOSProjectKeys()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,8 @@ final class HomeViewController: UIViewController {
         #if RELEASE
             title = Localized.homeScreenTitle
         #elseif DEBUG
-            title = "Debug"
+            title = "iOS project"
+            print(keys.artsyAPIClientKey)
         #endif
     }
     

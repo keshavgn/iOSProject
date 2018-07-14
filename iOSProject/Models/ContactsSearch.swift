@@ -10,7 +10,7 @@ import Foundation
 import CoreSpotlight
 
 extension ContactItem {
-    public static let domainIdentifier = "com.keshav.iOSProject"
+    public static let domainIdentifier = "com.keshavgn.iOSProject.contact"
     public var userActivityUserInfo: [String: String] {
         return ["id": name]
     }
@@ -19,7 +19,7 @@ extension ContactItem {
         let activity = NSUserActivity(activityType: ContactItem.domainIdentifier)
         activity.title = name
         activity.userInfo = userActivityUserInfo
-        activity.keywords = [phoneNumber, address]
+        activity.keywords = [phoneNumber, address, name]
         return activity
     }
 

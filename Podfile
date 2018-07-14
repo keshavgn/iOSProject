@@ -17,6 +17,13 @@ target 'iOSProject' do
     pod 'HDAugmentedReality', '~> 2.3'
 #    pod 'iOSFramework'
 
+plugin 'cocoapods-keys', {
+    :project => "iOSProject",
+    :keys => [
+    "ArtsyAPIClientSecret",
+    "ArtsyAPIClientKey",
+    ]}
+
   target 'iOSProjectTests' do
     inherit! :search_paths
     # Pods for testing
@@ -43,7 +50,7 @@ post_install do |installer|
     
     UI.title 'Thank you!' do
         UI.puts <<-EOS
-        Pod updates is done
+        Pods install is done
         EOS
     end
    

@@ -44,7 +44,7 @@
 		4069CC692080F69C00FB33BF /* IndexRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC682080F69C00FB33BF /* IndexRequestHandler.swift */; };
 		4069CC6D2080F69C00FB33BF /* iOSSpotlight.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4069CC662080F69C00FB33BF /* iOSSpotlight.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC712082298600FB33BF /* ContactsSearch.swift */; };
-		4069CC7420822D8200FB33BF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7320822D8200FB33BF /* Setting.swift */; };
+		4069CC7420822D8200FB33BF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7320822D8200FB33BF /* Settings.swift */; };
 		4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */; };
 		4069CC7820824C6700FB33BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7720824C6700FB33BF /* BaseViewController.swift */; };
 		4082DD1D206A799A00B0AECD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082DD1C206A799900B0AECD /* NotificationCenter.framework */; };
@@ -223,7 +223,7 @@
 		4069CC682080F69C00FB33BF /* IndexRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRequestHandler.swift; sourceTree = "<group>"; };
 		4069CC6A2080F69C00FB33BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4069CC712082298600FB33BF /* ContactsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSearch.swift; sourceTree = "<group>"; };
-		4069CC7320822D8200FB33BF /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		4069CC7320822D8200FB33BF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4069CC7720824C6700FB33BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4069CC7A2082ED5A00FB33BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -594,7 +594,7 @@
 		40E7A3FC20385399004F23DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4069CC7320822D8200FB33BF /* Setting.swift */,
+				4069CC7320822D8200FB33BF /* Settings.swift */,
 				40D94C92203C585E00B71362 /* ContactItem.swift */,
 				40315C8B2068771E008E492E /* PlacesLoader.swift */,
 				40315C8C2068771E008E492E /* Place.swift */,
@@ -994,6 +994,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HDAugmentedReality/HDAugmentedReality.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -1015,6 +1016,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDAugmentedReality.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -1157,7 +1159,7 @@
 				403EE3232070BCD50051E627 /* StoryBoard+iOS.swift in Sources */,
 				4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */,
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
-				4069CC7420822D8200FB33BF /* Setting.swift in Sources */,
+				4069CC7420822D8200FB33BF /* Settings.swift in Sources */,
 				403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */,
 				4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */,
 				40D94C93203C585E00B71362 /* ContactItem.swift in Sources */,

@@ -3,14 +3,14 @@ Home Screen
 - Collection view with custom cells
 
 - FireBase
--- Login with FireBase API
--- Custom view with Animation for Registration view
+- Login with FireBase API
+- Custom view with Animation for Registration view
 
---- Contacts
----- FireBase APIs for Add/Delete/View contacts
----- Tableview with custom cells
----- Drag & Drop on Tableview cells to delete contact
----- Drag to dismiss Contact Details view
+- Contacts
+- FireBase APIs for Add/Delete/View contacts
+- Tableview with custom cells
+- Drag & Drop on Tableview cells to delete contact
+- Drag to dismiss Contact Details view
 
 
 Machine Learning
@@ -28,5 +28,6 @@ Extensions
 
 Development Tools and third Party libraries
 - Cocoa Pods
+- CocoaPod Keys
 - SwiftGen
 - Firebase
