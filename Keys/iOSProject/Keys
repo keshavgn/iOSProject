@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo "Hello cocoapod-keys"
+ENVIRONMENT_FILE="$1.env"
+
+if [ ! -f $ENVIRONMENT_FILE ]; then
+#    echo "$ENVIRONMENT_FILE file exists"
+    echo "Created file: $ENVIRONMENT_FILE"
+    touch $ENVIRONMENT_FILE
+fi
+
+# Clear the old contents
+> $ENVIRONMENT_FILE
+
+# Copy secret keys to .env file
+echo "export ArtsyAPIClientSecret=\"keshav\"" >> $ENVIRONMENT_FILE
+
+echo "export ArtsyAPIClientKey=\"keshavmurthy\"" >> $ENVIRONMENT_FILE
+
+
+# End
+echo "Generated keys successfully"!
