@@ -87,7 +87,7 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController {
     
     private func animationView(completion: ((Bool)->(Void))?) {
-        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseInOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: { _ in
             completion?(true)

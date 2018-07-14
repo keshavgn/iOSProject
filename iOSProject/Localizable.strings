@@ -22,6 +22,7 @@
 
 /* ML screen */
 "answer_label_default" = "detecting scene...";
+"inital_label_default" = "Add image from Camera/Gallery";
 "camera_button_title" = "Camera";
 "gallery_button_title" = "Gallery";
 "cancel_button_title" = "Cancel";

@@ -127,8 +127,8 @@ extension AugmentedRealityViewController: AnnotationViewDelegate {
     }
     
     func showInfoView(forPlace place: Place) {
-        let alert = UIAlertController(title: place.place , message: place.infoText, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: place.place , message: place.infoText, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         arViewController.present(alert, animated: true, completion: nil)
     }
 }

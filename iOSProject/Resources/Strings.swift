@@ -25,6 +25,8 @@ enum Localized {
   static let homeScreenBackTitle = Localized.tr("Localizable", "home_screen_back_title")
   /// iOS Project
   static let homeScreenTitle = Localized.tr("Localizable", "home_screen_title")
+  /// Add image from Camera/Gallery
+  static let initalLabelDefault = Localized.tr("Localizable", "inital_label_default")
   /// Login Failed
   static let loginScreenLoginFail = Localized.tr("Localizable", "login_screen_login_fail")
   /// Register Failed

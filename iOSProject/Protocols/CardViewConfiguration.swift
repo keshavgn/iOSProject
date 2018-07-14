@@ -21,8 +21,8 @@ public struct CardViewConfiguration {
     }
     public var shouldShowCardView: Bool
     public var shouldShowSeparatorLine: Bool
-    public var accessoryType: UITableViewCellAccessoryType
-    public var selectionStyle: UITableViewCellSelectionStyle
+    public var accessoryType: UITableViewCell.AccessoryType
+    public var selectionStyle: UITableViewCell.SelectionStyle
 
     public init(contentEdgeInset: UIEdgeInsets? = nil,
          cardEdgeInset: UIEdgeInsets? = nil,
@@ -31,8 +31,8 @@ public struct CardViewConfiguration {
          isAllowHighlight: Bool = true,
          shouldShowCardView: Bool = true,
          shouldShowSeparatorLine: Bool = true,
-         accessoryType: UITableViewCellAccessoryType = .none,
-         selectionStyle: UITableViewCellSelectionStyle = .default) {
+         accessoryType: UITableViewCell.AccessoryType = .none,
+         selectionStyle: UITableViewCell.SelectionStyle = .default) {
         self.contentEdgeInset = contentEdgeInset
         self.cardEdgeInset = cardEdgeInset
         self.separatorInset = separatorInset

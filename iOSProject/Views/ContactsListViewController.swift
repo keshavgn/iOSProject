@@ -31,7 +31,7 @@ final class ContactsListViewController: BaseViewController {
     lazy private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorColor = UIColor.clear
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.sectionHeaderHeight = Constant.sectionHeaderHeight
         tableView.estimatedRowHeight = Constant.estimatedRowHeight
         tableView.tableFooterView = UIView()

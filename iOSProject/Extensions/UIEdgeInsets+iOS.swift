@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKit.UIGeometry
 
 public extension UIEdgeInsets {
 
@@ -48,4 +49,8 @@ public extension UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: left, bottom: 0, right: right)
     }
     
+#if swift(>=4.2)
+    public static let zero = UIEdgeInsets()
+    public static let UIEdgeInsetsZero = UIEdgeInsets()
+#endif
 }

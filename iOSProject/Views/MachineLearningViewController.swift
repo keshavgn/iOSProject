@@ -22,6 +22,7 @@ final class MachineLearningViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = camaraBarButtonItem
+        answerLabel.text = Localized.initalLabelDefault
     }
     
     @IBAction func openCameraOrPhotosApp(_ sender: Any) {
@@ -88,13 +89,12 @@ extension MachineLearningViewController {
 
 extension MachineLearningViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true)
         
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         scene.image = image
         guard let ciImage = CIImage(image: image) else { return }
         detectScene(image: ciImage)
     }
 }
-

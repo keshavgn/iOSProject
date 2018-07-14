@@ -76,7 +76,7 @@ class CardLayoutTableViewCell: UITableViewCell, Cardable {
         super.layoutMarginsDidChange()
     }
     
-    static open var identifier: String {
+    static public var identifier: String {
         get {
             return NSStringFromClass(classForCoder()).components(separatedBy: ".").last! + "Identifier"
         }
@@ -96,7 +96,7 @@ class CardLayoutTableViewCell: UITableViewCell, Cardable {
     
     // MARK: - View Lifecycle
     
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         separatorLine = UIView()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
