@@ -11,7 +11,7 @@ import UIKit
 final class HomeViewModel {
     
     private var homeViewCellNames: [String] {
-        return ["FireBase", "MachineLearning", "AR"]
+        return ["FireBase", "MachineLearning", "AR", "PageControl"]
     }
     
     var numberOfRows: Int {

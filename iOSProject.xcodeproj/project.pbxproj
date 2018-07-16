@@ -47,12 +47,18 @@
 		4069CC7420822D8200FB33BF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7320822D8200FB33BF /* Settings.swift */; };
 		4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */; };
 		4069CC7820824C6700FB33BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069CC7720824C6700FB33BF /* BaseViewController.swift */; };
+		4078B0B620FB832C00BBEB7D /* CALayer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */; };
+		4078B0B920FB878C00BBEB7D /* PageViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0B720FB878C00BBEB7D /* PageViewCollectionViewCell.swift */; };
+		4078B0BA20FB878C00BBEB7D /* PageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4078B0B820FB878C00BBEB7D /* PageViewCollectionViewCell.xib */; };
 		4082DD1D206A799A00B0AECD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082DD1C206A799900B0AECD /* NotificationCenter.framework */; };
 		4082DD20206A799A00B0AECD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4082DD1F206A799A00B0AECD /* TodayViewController.swift */; };
 		4082DD23206A799A00B0AECD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4082DD21206A799A00B0AECD /* MainInterface.storyboard */; };
 		4082DD27206A799A00B0AECD /* iOSToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4082DD1B206A799900B0AECD /* iOSToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4082DD58206D0C3200B0AECD /* Date+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4082DD57206D0C3100B0AECD /* Date+iOS.swift */; };
 		4082DD59206D0CCC00B0AECD /* Date+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4082DD57206D0C3100B0AECD /* Date+iOS.swift */; };
+		40B2220820FB4F4D00A8541E /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2220720FB4F4D00A8541E /* PageControlViewController.swift */; };
+		40B2220B20FB4F9E00A8541E /* PageControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2220920FB4F9E00A8541E /* PageControlCell.swift */; };
+		40B2220C20FB4F9E00A8541E /* PageControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B2220A20FB4F9E00A8541E /* PageControlCell.xib */; };
 		40CFFF04203D385400AF7328 /* Cardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF03203D385400AF7328 /* Cardable.swift */; };
 		40CFFF06203DABE400AF7328 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF05203DABE400AF7328 /* ContactsViewModel.swift */; };
 		40CFFF09203DAED300AF7328 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF08203DAED300AF7328 /* ContactListTableViewCell.swift */; };
@@ -227,12 +233,18 @@
 		4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4069CC7720824C6700FB33BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4069CC7A2082ED5A00FB33BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+iOS.swift"; sourceTree = "<group>"; };
+		4078B0B720FB878C00BBEB7D /* PageViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		4078B0B820FB878C00BBEB7D /* PageViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		4082DD1B206A799900B0AECD /* iOSToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4082DD1C206A799900B0AECD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4082DD1F206A799A00B0AECD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		4082DD22206A799A00B0AECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		4082DD24206A799A00B0AECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4082DD57206D0C3100B0AECD /* Date+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+iOS.swift"; sourceTree = "<group>"; };
+		40B2220720FB4F4D00A8541E /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		40B2220920FB4F9E00A8541E /* PageControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlCell.swift; sourceTree = "<group>"; };
+		40B2220A20FB4F9E00A8541E /* PageControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageControlCell.xib; sourceTree = "<group>"; };
 		40CFFF03203D385400AF7328 /* Cardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardable.swift; sourceTree = "<group>"; };
 		40CFFF05203DABE400AF7328 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		40CFFF08203DAED300AF7328 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
@@ -507,6 +519,7 @@
 				40E349012043E7F00054C716 /* MachineLearningViewController.swift */,
 				40315C8920687366008E492E /* AugmentedRealityViewController.swift */,
 				4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */,
+				40B2220720FB4F4D00A8541E /* PageControlViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -578,6 +591,7 @@
 				40E348FF2043935D0054C716 /* UICollectionViewFlowLayout+iOS.swift */,
 				4082DD57206D0C3100B0AECD /* Date+iOS.swift */,
 				403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */,
+				4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -587,6 +601,10 @@
 			children = (
 				40E348FB204392600054C716 /* HomeViewCollectionViewCell.swift */,
 				40E348FC204392600054C716 /* HomeViewCollectionViewCell.xib */,
+				40B2220920FB4F9E00A8541E /* PageControlCell.swift */,
+				40B2220A20FB4F9E00A8541E /* PageControlCell.xib */,
+				4078B0B720FB878C00BBEB7D /* PageViewCollectionViewCell.swift */,
+				4078B0B820FB878C00BBEB7D /* PageViewCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -905,12 +923,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4078B0BA20FB878C00BBEB7D /* PageViewCollectionViewCell.xib in Resources */,
 				40E348F520438A630054C716 /* ContactListTableViewCell.xib in Resources */,
 				405B24F820328E5B00054469 /* LaunchScreen.storyboard in Resources */,
 				40E348FE204392600054C716 /* HomeViewCollectionViewCell.xib in Resources */,
 				40478E11205B9D2300161FCE /* swiftgen.yml in Resources */,
 				404079CA2053E774005A6600 /* Localizable.strings in Resources */,
 				40D94C8D203AFE5A00B71362 /* GoogleService-Info.plist in Resources */,
+				40B2220C20FB4F9E00A8541E /* PageControlCell.xib in Resources */,
 				405B24F520328E5B00054469 /* Assets.xcassets in Resources */,
 				405B24F020328E5B00054469 /* Main.storyboard in Resources */,
 			);
@@ -1143,10 +1163,12 @@
 				40CFFF11203E7AF500AF7328 /* AddContactViewController.swift in Sources */,
 				405B24EB20328E5B00054469 /* AppDelegate.swift in Sources */,
 				40E349022043E7F00054C716 /* MachineLearningViewController.swift in Sources */,
+				40B2220820FB4F4D00A8541E /* PageControlViewController.swift in Sources */,
 				40E349002043935D0054C716 /* UICollectionViewFlowLayout+iOS.swift in Sources */,
 				40CFFF06203DABE400AF7328 /* ContactsViewModel.swift in Sources */,
 				40E7A4012038FD93004F23DA /* UserViewModel.swift in Sources */,
 				40E348FD204392600054C716 /* HomeViewCollectionViewCell.swift in Sources */,
+				40B2220B20FB4F9E00A8541E /* PageControlCell.swift in Sources */,
 				403EE3212070B0D10051E627 /* DismissAnimator.swift in Sources */,
 				40D94C99203CFB5700B71362 /* UIView+iOS.swift in Sources */,
 				4069CC7820824C6700FB33BF /* BaseViewController.swift in Sources */,
@@ -1163,6 +1185,7 @@
 				403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */,
 				4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */,
 				40D94C93203C585E00B71362 /* ContactItem.swift in Sources */,
+				4078B0B920FB878C00BBEB7D /* PageViewCollectionViewCell.swift in Sources */,
 				40CFFF0D203E548400AF7328 /* CardLayoutTableViewCell.swift in Sources */,
 				4033DEE82069CABA00262511 /* AnnotationView.swift in Sources */,
 				4033DEE5206938DC00262511 /* PlaceAnnotation.swift in Sources */,
@@ -1173,6 +1196,7 @@
 				40E7A3F920384DF1004F23DA /* RegisterView.swift in Sources */,
 				40E348F720438B2F0054C716 /* HomeViewController.swift in Sources */,
 				40478E15205B9E9200161FCE /* Images.swift in Sources */,
+				4078B0B620FB832C00BBEB7D /* CALayer+iOS.swift in Sources */,
 				40478E16205B9E9200161FCE /* Strings.swift in Sources */,
 				40F4B3222045476D001428A3 /* Utility.swift in Sources */,
 				40315C8D2068771E008E492E /* PlacesLoader.swift in Sources */,

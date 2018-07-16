@@ -33,6 +33,8 @@ enum Localized {
   static let loginScreenRegisterFail = Localized.tr("Localizable", "login_screen_register_fail")
   /// Login
   static let loginScreenTitle = Localized.tr("Localizable", "login_screen_title")
+  /// Custom Page Control
+  static let pagecontrolScreenTitle = Localized.tr("Localizable", "pagecontrol_screen_title")
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

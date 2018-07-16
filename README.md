@@ -2,11 +2,11 @@
 Home Screen
 - Collection view with custom cells
 
-- FireBase
-- Login with FireBase API
+Login
+- FireBase API for login & registration
 - Custom view with Animation for Registration view
 
-- Contacts
+Contacts
 - FireBase APIs for Add/Delete/View contacts
 - Tableview with custom cells
 - Drag & Drop on Tableview cells to delete contact
@@ -18,6 +18,9 @@ Machine Learning
 
 Augmented Reality
 - Displaying nearby points of interest with current position on Camera view with Maps
+
+PageControl
+- Custom page control using collectionView
 
 Extensions
 - iMessage 

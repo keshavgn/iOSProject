@@ -26,3 +26,7 @@
 "camera_button_title" = "Camera";
 "gallery_button_title" = "Gallery";
 "cancel_button_title" = "Cancel";
+
+/*Page Control*/
+
+"pagecontrol_screen_title" = "Custom Page Control";
