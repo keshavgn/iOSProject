@@ -8,6 +8,7 @@
 
 import UIKit
 import Keys
+import Intents
 
 final class HomeViewController: UIViewController {
 
@@ -28,6 +29,7 @@ final class HomeViewController: UIViewController {
 
         view.iOS_addSubview(collectionView)
         viewModel.registerCells(for: collectionView)
+        donateInteraction()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -64,5 +66,23 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         performSegue(withIdentifier: viewModel.segueId(at: indexPath.item), sender: nil)
+    }
+}
+
+
+extension HomeViewController {
+
+    func donateInteraction() {
+        let intent = PhotoOfTheDayIntent()
+        intent.suggestedInvocationPhrase = "Energize"
+        
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate { (error) in
+            if let error = error as NSError? {
+                print("Interaction donation failed: %@", error.description)
+            } else {
+                print("Successfully donated interaction")
+            }
+        }
     }
 }

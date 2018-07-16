@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>Siri.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>32</integer>
+		</dict>
+		<key>SiriUI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>34</integer>
+		</dict>
 		<key>iOSMessage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,7 +32,7 @@
 		<key>iOSSpotlight.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>33</integer>
 		</dict>
 		<key>iOSToday.xcscheme</key>
 		<dict>
