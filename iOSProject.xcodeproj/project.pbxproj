@@ -50,6 +50,26 @@
 		4078B0B620FB832C00BBEB7D /* CALayer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */; };
 		4078B0B920FB878C00BBEB7D /* PageViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0B720FB878C00BBEB7D /* PageViewCollectionViewCell.swift */; };
 		4078B0BA20FB878C00BBEB7D /* PageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4078B0B820FB878C00BBEB7D /* PageViewCollectionViewCell.xib */; };
+		4078B0E520FCBCCF00BBEB7D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0E420FCBCCF00BBEB7D /* IntentHandler.swift */; };
+		4078B0ED20FCBCD000BBEB7D /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4078B0EC20FCBCD000BBEB7D /* IntentsUI.framework */; };
+		4078B0F020FCBCD000BBEB7D /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0EF20FCBCD000BBEB7D /* IntentViewController.swift */; };
+		4078B0F320FCBCD000BBEB7D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4078B0F120FCBCD000BBEB7D /* MainInterface.storyboard */; };
+		4078B0F720FCBCD000BBEB7D /* SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4078B0EB20FCBCD000BBEB7D /* SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4078B0FA20FCBCD000BBEB7D /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4078B0E220FCBCCF00BBEB7D /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4078B10220FCBD2D00BBEB7D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10120FCBD2D00BBEB7D /* Intents.intentdefinition */; };
+		4078B10320FCC07000BBEB7D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10120FCBD2D00BBEB7D /* Intents.intentdefinition */; };
+		4078B10420FCC07100BBEB7D /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10120FCBD2D00BBEB7D /* Intents.intentdefinition */; };
+		4078B10520FCC0DD00BBEB7D /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B0E420FCBCCF00BBEB7D /* IntentHandler.swift */; };
+		4078B10720FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10620FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift */; };
+		4078B10820FCC28800BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10620FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift */; };
+		4078B10920FCC28900BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10620FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift */; };
+		4078B10C20FCC43800BBEB7D /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10B20FCC43800BBEB7D /* PhotoInfo.swift */; };
+		4078B10E20FCC45100BBEB7D /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10D20FCC45100BBEB7D /* PhotoViewModel.swift */; };
+		4078B11020FCC48E00BBEB7D /* URL+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10F20FCC48E00BBEB7D /* URL+iOS.swift */; };
+		4078B11120FCC50000BBEB7D /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10D20FCC45100BBEB7D /* PhotoViewModel.swift */; };
+		4078B11220FCC50000BBEB7D /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10D20FCC45100BBEB7D /* PhotoViewModel.swift */; };
+		4078B11320FCC50300BBEB7D /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10B20FCC43800BBEB7D /* PhotoInfo.swift */; };
+		4078B11420FCC50400BBEB7D /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4078B10B20FCC43800BBEB7D /* PhotoInfo.swift */; };
 		4082DD1D206A799A00B0AECD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082DD1C206A799900B0AECD /* NotificationCenter.framework */; };
 		4082DD20206A799A00B0AECD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4082DD1F206A799A00B0AECD /* TodayViewController.swift */; };
 		4082DD23206A799A00B0AECD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4082DD21206A799A00B0AECD /* MainInterface.storyboard */; };
@@ -129,6 +149,20 @@
 			remoteGlobalIDString = 4069CC652080F69C00FB33BF;
 			remoteInfo = iOSSpotlight;
 		};
+		4078B0F520FCBCD000BBEB7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 405B24DF20328E5B00054469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4078B0EA20FCBCD000BBEB7D;
+			remoteInfo = SiriUI;
+		};
+		4078B0F820FCBCD000BBEB7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 405B24DF20328E5B00054469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4078B0E120FCBCCF00BBEB7D;
+			remoteInfo = Siri;
+		};
 		4082DD25206A799A00B0AECD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 405B24DF20328E5B00054469 /* Project object */;
@@ -160,6 +194,8 @@
 			dstSubfolderSpec = 13;
 			files = (
 				4082DD27206A799A00B0AECD /* iOSToday.appex in Embed App Extensions */,
+				4078B0F720FCBCD000BBEB7D /* SiriUI.appex in Embed App Extensions */,
+				4078B0FA20FCBCD000BBEB7D /* Siri.appex in Embed App Extensions */,
 				404079E020540F57005A6600 /* iOSMessage.appex in Embed App Extensions */,
 				4069CC6D2080F69C00FB33BF /* iOSSpotlight.appex in Embed App Extensions */,
 			);
@@ -236,6 +272,19 @@
 		4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+iOS.swift"; sourceTree = "<group>"; };
 		4078B0B720FB878C00BBEB7D /* PageViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		4078B0B820FB878C00BBEB7D /* PageViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		4078B0E220FCBCCF00BBEB7D /* Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Siri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4078B0E420FCBCCF00BBEB7D /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		4078B0E620FCBCCF00BBEB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4078B0EB20FCBCD000BBEB7D /* SiriUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4078B0EC20FCBCD000BBEB7D /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		4078B0EF20FCBCD000BBEB7D /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		4078B0F220FCBCD000BBEB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4078B0F420FCBCD000BBEB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4078B10120FCBD2D00BBEB7D /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		4078B10620FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOfTheDayIntentHandler.swift; sourceTree = "<group>"; };
+		4078B10B20FCC43800BBEB7D /* PhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
+		4078B10D20FCC45100BBEB7D /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		4078B10F20FCC48E00BBEB7D /* URL+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+iOS.swift"; sourceTree = "<group>"; };
 		4082DD1B206A799900B0AECD /* iOSToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iOSToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4082DD1C206A799900B0AECD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4082DD1F206A799A00B0AECD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -337,6 +386,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4078B0DF20FCBCCF00BBEB7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078B0E820FCBCD000BBEB7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4078B0ED20FCBCD000BBEB7D /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4082DD18206A799900B0AECD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +492,8 @@
 				40F23EC620569335001FCA74 /* iOSWatch Extension */,
 				4082DD1E206A799A00B0AECD /* iOSToday */,
 				4069CC672080F69C00FB33BF /* iOSSpotlight */,
+				4078B0E320FCBCCF00BBEB7D /* Siri */,
+				4078B0EE20FCBCD000BBEB7D /* SiriUI */,
 				405B24E820328E5B00054469 /* Products */,
 				0ED3D692BCD0DF8B93579CC1 /* Pods */,
 				95DA1588F5CA6121D186D9D0 /* Frameworks */,
@@ -445,6 +511,8 @@
 				40F23EC220569335001FCA74 /* iOSWatch Extension.appex */,
 				4082DD1B206A799900B0AECD /* iOSToday.appex */,
 				4069CC662080F69C00FB33BF /* iOSSpotlight.appex */,
+				4078B0E220FCBCCF00BBEB7D /* Siri.appex */,
+				4078B0EB20FCBCD000BBEB7D /* SiriUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,6 +532,8 @@
 				405B24EA20328E5B00054469 /* AppDelegate.swift */,
 				405B24F420328E5B00054469 /* Assets.xcassets */,
 				40478E0C205B99BA00161FCE /* Others */,
+				4078B10A20FCC40900BBEB7D /* SiriShortcuts */,
+				4078B10120FCBD2D00BBEB7D /* Intents.intentdefinition */,
 			);
 			path = iOSProject;
 			sourceTree = "<group>";
@@ -533,6 +603,35 @@
 			path = iOSSpotlight;
 			sourceTree = "<group>";
 		};
+		4078B0E320FCBCCF00BBEB7D /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				4078B0E420FCBCCF00BBEB7D /* IntentHandler.swift */,
+				4078B0E620FCBCCF00BBEB7D /* Info.plist */,
+			);
+			path = Siri;
+			sourceTree = "<group>";
+		};
+		4078B0EE20FCBCD000BBEB7D /* SiriUI */ = {
+			isa = PBXGroup;
+			children = (
+				4078B0EF20FCBCD000BBEB7D /* IntentViewController.swift */,
+				4078B0F120FCBCD000BBEB7D /* MainInterface.storyboard */,
+				4078B0F420FCBCD000BBEB7D /* Info.plist */,
+				4078B10620FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift */,
+			);
+			path = SiriUI;
+			sourceTree = "<group>";
+		};
+		4078B10A20FCC40900BBEB7D /* SiriShortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				4078B10B20FCC43800BBEB7D /* PhotoInfo.swift */,
+				4078B10D20FCC45100BBEB7D /* PhotoViewModel.swift */,
+			);
+			path = SiriShortcuts;
+			sourceTree = "<group>";
+		};
 		4082DD1E206A799A00B0AECD /* iOSToday */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +691,7 @@
 				4082DD57206D0C3100B0AECD /* Date+iOS.swift */,
 				403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */,
 				4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */,
+				4078B10F20FCC48E00BBEB7D /* URL+iOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -667,6 +767,7 @@
 				8F31A068E858A7C81A10CAA5 /* Pods_iOSProjectUITests.framework */,
 				404079D320540F57005A6600 /* Messages.framework */,
 				4082DD1C206A799900B0AECD /* NotificationCenter.framework */,
+				4078B0EC20FCBCD000BBEB7D /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -712,6 +813,8 @@
 				40F23ED220569335001FCA74 /* PBXTargetDependency */,
 				4082DD26206A799A00B0AECD /* PBXTargetDependency */,
 				4069CC6C2080F69C00FB33BF /* PBXTargetDependency */,
+				4078B0F620FCBCD000BBEB7D /* PBXTargetDependency */,
+				4078B0F920FCBCD000BBEB7D /* PBXTargetDependency */,
 			);
 			name = iOSProject;
 			productName = iOSProject;
@@ -773,6 +876,40 @@
 			productReference = 4069CC662080F69C00FB33BF /* iOSSpotlight.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4078B0E120FCBCCF00BBEB7D /* Siri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4078B10020FCBCD000BBEB7D /* Build configuration list for PBXNativeTarget "Siri" */;
+			buildPhases = (
+				4078B0DE20FCBCCF00BBEB7D /* Sources */,
+				4078B0DF20FCBCCF00BBEB7D /* Frameworks */,
+				4078B0E020FCBCCF00BBEB7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Siri;
+			productName = Siri;
+			productReference = 4078B0E220FCBCCF00BBEB7D /* Siri.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4078B0EA20FCBCD000BBEB7D /* SiriUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4078B0FF20FCBCD000BBEB7D /* Build configuration list for PBXNativeTarget "SiriUI" */;
+			buildPhases = (
+				4078B0E720FCBCD000BBEB7D /* Sources */,
+				4078B0E820FCBCD000BBEB7D /* Frameworks */,
+				4078B0E920FCBCD000BBEB7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriUI;
+			productName = SiriUI;
+			productReference = 4078B0EB20FCBCD000BBEB7D /* SiriUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4082DD1A206A799900B0AECD /* iOSToday */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4082DD2A206A799A00B0AECD /* Build configuration list for PBXNativeTarget "iOSToday" */;
@@ -831,7 +968,7 @@
 		405B24DF20328E5B00054469 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Keshav;
 				TargetAttributes = {
@@ -846,6 +983,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 						};
@@ -865,6 +1005,14 @@
 					4069CC652080F69C00FB33BF = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+					4078B0E120FCBCCF00BBEB7D = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
+					4078B0EA20FCBCD000BBEB7D = {
+						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
 					4082DD1A206A799900B0AECD = {
@@ -905,6 +1053,8 @@
 				40F23EC120569335001FCA74 /* iOSWatch Extension */,
 				4082DD1A206A799900B0AECD /* iOSToday */,
 				4069CC652080F69C00FB33BF /* iOSSpotlight */,
+				4078B0E120FCBCCF00BBEB7D /* Siri */,
+				4078B0EA20FCBCD000BBEB7D /* SiriUI */,
 			);
 		};
 /* End PBXProject section */
@@ -954,6 +1104,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078B0E020FCBCCF00BBEB7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078B0E920FCBCD000BBEB7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4078B0F320FCBCD000BBEB7D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4078B10C20FCC43800BBEB7D /* PhotoInfo.swift in Sources */,
 				40CFFF11203E7AF500AF7328 /* AddContactViewController.swift in Sources */,
 				405B24EB20328E5B00054469 /* AppDelegate.swift in Sources */,
 				40E349022043E7F00054C716 /* MachineLearningViewController.swift in Sources */,
@@ -1181,7 +1347,10 @@
 				403EE3232070BCD50051E627 /* StoryBoard+iOS.swift in Sources */,
 				4069CC762082488D00FB33BF /* ForgotPasswordViewController.swift in Sources */,
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
+				4078B10920FCC28900BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */,
+				4078B10E20FCC45100BBEB7D /* PhotoViewModel.swift in Sources */,
 				4069CC7420822D8200FB33BF /* Settings.swift in Sources */,
+				4078B10220FCBD2D00BBEB7D /* Intents.intentdefinition in Sources */,
 				403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */,
 				4069CC722082298600FB33BF /* ContactsSearch.swift in Sources */,
 				40D94C93203C585E00B71362 /* ContactItem.swift in Sources */,
@@ -1191,6 +1360,7 @@
 				4033DEE5206938DC00262511 /* PlaceAnnotation.swift in Sources */,
 				40315C8E2068771E008E492E /* Place.swift in Sources */,
 				40E348F120403C840054C716 /* CGRect+iOS.swift in Sources */,
+				4078B11020FCC48E00BBEB7D /* URL+iOS.swift in Sources */,
 				40F4B31E20451FCA001428A3 /* GoogLeNetPlaces.mlmodel in Sources */,
 				40CFFF13203EF05400AF7328 /* CardViewLayoutable.swift in Sources */,
 				40E7A3F920384DF1004F23DA /* RegisterView.swift in Sources */,
@@ -1229,6 +1399,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				4069CC692080F69C00FB33BF /* IndexRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078B0DE20FCBCCF00BBEB7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4078B10320FCC07000BBEB7D /* Intents.intentdefinition in Sources */,
+				4078B11220FCC50000BBEB7D /* PhotoViewModel.swift in Sources */,
+				4078B10820FCC28800BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */,
+				4078B0E520FCBCCF00BBEB7D /* IntentHandler.swift in Sources */,
+				4078B11320FCC50300BBEB7D /* PhotoInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4078B0E720FCBCD000BBEB7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4078B11420FCC50400BBEB7D /* PhotoInfo.swift in Sources */,
+				4078B10420FCC07100BBEB7D /* Intents.intentdefinition in Sources */,
+				4078B10520FCC0DD00BBEB7D /* IntentHandler.swift in Sources */,
+				4078B10720FCC28000BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */,
+				4078B0F020FCBCD000BBEB7D /* IntentViewController.swift in Sources */,
+				4078B11120FCC50000BBEB7D /* PhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1278,6 +1473,16 @@
 			target = 4069CC652080F69C00FB33BF /* iOSSpotlight */;
 			targetProxy = 4069CC6B2080F69C00FB33BF /* PBXContainerItemProxy */;
 		};
+		4078B0F620FCBCD000BBEB7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4078B0EA20FCBCD000BBEB7D /* SiriUI */;
+			targetProxy = 4078B0F520FCBCD000BBEB7D /* PBXContainerItemProxy */;
+		};
+		4078B0F920FCBCD000BBEB7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4078B0E120FCBCCF00BBEB7D /* Siri */;
+			targetProxy = 4078B0F820FCBCD000BBEB7D /* PBXContainerItemProxy */;
+		};
 		4082DD26206A799A00B0AECD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4082DD1A206A799900B0AECD /* iOSToday */;
@@ -1321,6 +1526,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		4078B0F120FCBCD000BBEB7D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4078B0F220FCBCD000BBEB7D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		4082DD21206A799A00B0AECD /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1345,10 +1558,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1361,10 +1575,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSMessage;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1492,11 +1707,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iOSProject/iOSProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1511,7 +1727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iOSProject/iOSProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1525,9 +1741,10 @@
 					"RELEASE=1",
 				);
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1608,10 +1825,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSSpotlight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSSpotlight;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSSpotlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1623,10 +1841,85 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSSpotlight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSSpotlight;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSSpotlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4078B0FB20FCBCD000BBEB7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
+				INFOPLIST_FILE = Siri/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.Siri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4078B0FC20FCBCD000BBEB7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
+				INFOPLIST_FILE = Siri/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.Siri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4078B0FD20FCBCD000BBEB7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
+				INFOPLIST_FILE = SiriUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.SiriUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4078B0FE20FCBCD000BBEB7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
+				INFOPLIST_FILE = SiriUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.SiriUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1638,10 +1931,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSToday;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1653,10 +1947,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = iOSToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.iOSToday;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.iOSToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1673,7 +1968,7 @@
 				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				IBSC_MODULE = iOSWatch_Extension;
 				INFOPLIST_FILE = iOSWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1692,7 +1987,7 @@
 				DEVELOPMENT_TEAM = SUSL4KG8XV;
 				IBSC_MODULE = iOSWatch_Extension;
 				INFOPLIST_FILE = iOSWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1707,10 +2002,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = "iOSWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1725,10 +2020,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SUSL4KG8XV;
+				DEVELOPMENT_TEAM = 87CT3T3CK2;
 				INFOPLIST_FILE = "iOSWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshavgn.iOSProject.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.rakuten.ichiba.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1791,6 +2086,24 @@
 			buildConfigurations = (
 				4069CC6E2080F69C00FB33BF /* Debug */,
 				4069CC6F2080F69C00FB33BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4078B0FF20FCBCD000BBEB7D /* Build configuration list for PBXNativeTarget "SiriUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4078B0FD20FCBCD000BBEB7D /* Debug */,
+				4078B0FE20FCBCD000BBEB7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4078B10020FCBCD000BBEB7D /* Build configuration list for PBXNativeTarget "Siri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4078B0FB20FCBCD000BBEB7D /* Debug */,
+				4078B0FC20FCBCD000BBEB7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

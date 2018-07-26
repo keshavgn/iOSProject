@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.keshavgn.iOSProject</string>
+	<string>jp.co.rakuten.ichiba</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
