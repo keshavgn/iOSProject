@@ -10,21 +10,28 @@ import UIKit
 
 class PeekToViewController: UIViewController {
 
+    lazy var imageView: UIImageView = {
+       let imageView = UIImageView()
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.iOS_addSubview(imageView)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setImage(_ name: String) {
+        imageView.image = UIImage(named: name)
     }
-    */
+    
+    override var previewActionItems: [UIPreviewActionItem] {
+        let likeAction = UIPreviewAction(title: "Like", style: .default) { (action, viewController) -> Void in
+        }
+        
+        let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, viewController) -> Void in
+        }
+        return [likeAction, deleteAction]
+    }
 
 }

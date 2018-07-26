@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07B70C5AF26BD0C0D6100BC2 /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB035BC092D410630AC543CD /* Pods_iOSProject.framework */; };
 		342A3C48F058C97075F18C9A /* Pods_iOSProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4DCC847D2BE32C095D0D2A /* Pods_iOSProjectTests.framework */; };
+		4012E6842107490600022D23 /* PeekToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012E6832107490600022D23 /* PeekToViewController.swift */; };
 		40315C8A20687366008E492E /* AugmentedRealityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8920687366008E492E /* AugmentedRealityViewController.swift */; };
 		40315C8D2068771E008E492E /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8B2068771E008E492E /* PlacesLoader.swift */; };
 		40315C8E2068771E008E492E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40315C8C2068771E008E492E /* Place.swift */; };
@@ -228,6 +229,7 @@
 
 /* Begin PBXFileReference section */
 		0FC018ACFF2792203F32E2A5 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
+		4012E6832107490600022D23 /* PeekToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekToViewController.swift; sourceTree = "<group>"; };
 		40315C8920687366008E492E /* AugmentedRealityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityViewController.swift; sourceTree = "<group>"; };
 		40315C8B2068771E008E492E /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
 		40315C8C2068771E008E492E /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 				40315C8920687366008E492E /* AugmentedRealityViewController.swift */,
 				4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */,
 				40B2220720FB4F4D00A8541E /* PageControlViewController.swift */,
+				4012E6832107490600022D23 /* PeekToViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1342,6 +1345,7 @@
 				40CFFF15203EF10E00AF7328 /* CardViewConfiguration.swift in Sources */,
 				40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */,
 				4082DD58206D0C3200B0AECD /* Date+iOS.swift in Sources */,
+				4012E6842107490600022D23 /* PeekToViewController.swift in Sources */,
 				40CFFF04203D385400AF7328 /* Cardable.swift in Sources */,
 				40315C8A20687366008E492E /* AugmentedRealityViewController.swift in Sources */,
 				403EE3232070BCD50051E627 /* StoryBoard+iOS.swift in Sources */,

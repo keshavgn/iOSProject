@@ -21,6 +21,7 @@ Augmented Reality
 
 PageControl
 - Custom page control using collectionView
+- Peek & Pop on Collection view items
 
 Extensions
 - iMessage 

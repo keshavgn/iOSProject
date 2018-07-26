@@ -55,6 +55,10 @@ class PageControlViewController: UIViewController {
         lineView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         lineView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: topCollectionView)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -175,5 +179,18 @@ extension PageControlViewController: UICollectionViewDataSource, UICollectionVie
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isScrollingBySelection = false
     }
+}
+
+
+extension PageControlViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = topCollectionView.indexPathForItem(at: location) else { return nil }
+        let peekToViewController = PeekToViewController()
+        peekToViewController.setImage(items[indexPath.item])
+        return peekToViewController
+    }
     
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
 }
