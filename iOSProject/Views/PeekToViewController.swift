@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeekToViewController: UIViewController {
+final class PeekToViewController: UIViewController {
 
     lazy var imageView: UIImageView = {
        let imageView = UIImageView()
@@ -26,10 +26,10 @@ class PeekToViewController: UIViewController {
     }
     
     override var previewActionItems: [UIPreviewActionItem] {
-        let likeAction = UIPreviewAction(title: "Like", style: .default) { (action, viewController) -> Void in
+        let likeAction = UIPreviewAction(title: Localized.Pagecontrol.like, style: .default) { (action, viewController) -> Void in
         }
         
-        let deleteAction = UIPreviewAction(title: "Delete", style: .destructive) { (action, viewController) -> Void in
+        let deleteAction = UIPreviewAction(title: Localized.Pagecontrol.delete, style: .destructive) { (action, viewController) -> Void in
         }
         return [likeAction, deleteAction]
     }

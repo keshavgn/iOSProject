@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageControlViewController: UIViewController {
+final class PageControlViewController: UIViewController {
 
     lazy var bottomCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.flowLayout(type: .pageControl))
@@ -43,13 +43,24 @@ class PageControlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized.pagecontrolScreenTitle
+        title = Localized.Pagecontrol.title
+        setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        selectedIndexPath = IndexPath(row: 0, section: 0)
+        bottomCollectionView.reloadData()
+        topCollectionView.reloadData()
+    }
+    
+    private func setupUI() {
         view.iOS_addSubviewWithFixedSize(topCollectionView, margin: UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0), maximumSubViewHeight: 420, onLayoutMargin:[.left, .right, .top])
         topCollectionView.register(UINib(nibName: PageViewCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier: PageViewCollectionViewCell.identifier)
-
+        
         view.iOS_addSubviewWithFixedSize(bottomCollectionView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0), maximumSubViewHeight: 100, onLayoutMargin:[.left, .right, .bottom])
         bottomCollectionView.register(UINib(nibName: PageControlCell.className, bundle: nil), forCellWithReuseIdentifier: PageControlCell.identifier)
-
+        
         view.addSubview(lineView)
         lineView.topAnchor.constraint(equalTo: bottomCollectionView.topAnchor, constant: -1).isActive = true
         lineView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -61,28 +72,21 @@ class PageControlViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        selectedIndexPath = IndexPath(row: 0, section: 0)
-        bottomCollectionView.reloadData()
-        topCollectionView.reloadData()
-    }
-    
-    @objc func leftIcon() {
+    @objc private func leftIcon() {
         guard let indexPath = selectedIndexPath else { return }
         if indexPath.item > 0 {
             move(next: false)
         }
     }
     
-    @objc func rightIcon() {
+    @objc private func rightIcon() {
         guard let indexPath = selectedIndexPath else { return }
         if indexPath.item < items.count {
             move(next: true)
         }
     }
     
-    func move(next: Bool) {
+    private func move(next: Bool) {
         guard let indexPath = selectedIndexPath, let cell = bottomCollectionView.cellForItem(at: indexPath) as? PageControlCell else { return }
         cell.isSelected = false
         var row = indexPath.item - 1
@@ -95,9 +99,19 @@ class PageControlViewController: UIViewController {
             selectedIndexPath = nextIndexPath
         }
     }
+    
+    private func showSelectedThumbnail(_ indexPath: IndexPath) {
+        if let indexPath = selectedIndexPath, let cell = bottomCollectionView.cellForItem(at: indexPath) as? PageControlCell {
+            cell.isSelected = false
+        }
+        if let cell = bottomCollectionView.cellForItem(at: indexPath) as? PageControlCell {
+            cell.isSelected = true
+            selectedIndexPath = indexPath
+        }
+    }
 }
 
-extension PageControlViewController: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
+extension PageControlViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -133,18 +147,9 @@ extension PageControlViewController: UICollectionViewDataSource, UICollectionVie
         }
         showSelectedThumbnail(indexPath)
     }
-    
-    func showSelectedThumbnail(_ indexPath: IndexPath) {
-        if let indexPath = selectedIndexPath, let cell = bottomCollectionView.cellForItem(at: indexPath) as? PageControlCell {
-            cell.isSelected = false
-        }
-        if let cell = bottomCollectionView.cellForItem(at: indexPath) as? PageControlCell {
-            cell.isSelected = true
-            selectedIndexPath = indexPath
-        }
+}
 
-    }
-    
+extension PageControlViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // if scrolling is by the user, update the small collection as well
         guard isScrollingBySelection == false, let collectionView = scrollView as? UICollectionView, collectionView == topCollectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {

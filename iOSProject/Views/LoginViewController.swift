@@ -17,7 +17,7 @@ import FirebasePhoneAuthUI
 
 final class LoginViewController: BaseViewController {
     
-    struct Constant {
+    private struct Constant {
         static let RegisterBottomMargin: CGFloat = 120
         static let HomeViewSegue = "HomeViewSegue"
     }
@@ -33,7 +33,7 @@ final class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = Localized.loginScreenTitle
+        title = Localized.LoginScreen.title
         emailTextField.text = "keshavgn@gmail.com"
         passwordTextField.text = "aaaaaa"
         registerView.delegate = self
@@ -48,7 +48,7 @@ final class LoginViewController: BaseViewController {
             if success == true {
                 weakSelf.performSegue(withIdentifier: Constant.HomeViewSegue, sender: nil)
             } else {
-                weakSelf.showAlert(title: Localized.loginScreenLoginFail, message: message)
+                weakSelf.showAlert(title: Localized.LoginScreen.loginFail, message: message)
             }
         })
         
@@ -133,7 +133,7 @@ extension LoginViewController: FUIAuthDelegate, RegisterUserDelegate {
             if success == true {
                 weakSelf.nativeLogin(weakSelf)
             } else {
-                weakSelf.showAlert(title: Localized.loginScreenRegisterFail, message: message)
+                weakSelf.showAlert(title: Localized.LoginScreen.registerFail, message: message)
             }
         })
     }

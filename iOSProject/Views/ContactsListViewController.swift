@@ -58,9 +58,7 @@ final class ContactsListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized.contactsScreenTitle
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(userLogout))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddContactView))
+        setupNavitationBarItems()
         setupUI()
     }
     
@@ -81,18 +79,14 @@ final class ContactsListViewController: BaseViewController {
         showDropItemView(show: false)
     }
     
-    private func showDropItemView(show: Bool) {
-        itemDropView.isHidden = !show
+    private func setupNavitationBarItems() {
+        title = Localized.ContactsScreen.title
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: Localized.ContactsScreen.logoutTitle, style: .done, target: self, action: #selector(userLogout))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddContactView))
     }
     
-    private func showContactDetailView(index: Int) {
-        if let contactDetailsViewController = UIStoryboard.iOS_ContactDetailsViewController {
-            contactDetailsViewController.transitioningDelegate = self
-            contactDetailsViewController.interactor = interactor
-            contactDetailsViewController.modalPresentationStyle = .custom
-            contactDetailsViewController.contact = viewModel.contactItem(at: index)
-            present(contactDetailsViewController, animated: true, completion: nil)
-        }
+    private func showDropItemView(show: Bool) {
+        itemDropView.isHidden = !show
     }
     
     @objc private func userLogout() {
@@ -104,6 +98,16 @@ final class ContactsListViewController: BaseViewController {
 extension ContactsListViewController {
     @objc private func showAddContactView() {
         performSegue(withIdentifier: Constant.addContactSegueId, sender: nil)
+    }
+    
+    private func showContactDetailView(index: Int) {
+        if let contactDetailsViewController = UIStoryboard.iOS_ContactDetailsViewController {
+            contactDetailsViewController.transitioningDelegate = self
+            contactDetailsViewController.interactor = interactor
+            contactDetailsViewController.modalPresentationStyle = .custom
+            contactDetailsViewController.contact = viewModel.contactItem(at: index)
+            present(contactDetailsViewController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -173,8 +177,8 @@ extension ContactsListViewController: UITableViewDragDelegate, UIDropInteraction
                 for index in stringItems {
                     if let row = Int(index) {
                         weakSelf.alertView.tag = row
-                        weakSelf.alertView.udpateTitle(title: Localized.alertDeleteContactTitle)
-                        weakSelf.alertView.udpateDescription(description: Localized.alertDeleteContactDescription)
+                        weakSelf.alertView.udpateTitle(title: Localized.AlertDelete.contactTitle)
+                        weakSelf.alertView.udpateDescription(description: Localized.AlertDelete.contactDescription)
                     }
                 }
             }

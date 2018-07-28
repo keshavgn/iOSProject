@@ -64,7 +64,7 @@ final class MachineLearningViewController: UIViewController {
 
 extension MachineLearningViewController {
     
-    func detectScene(image: CIImage) {
+    private func detectScene(image: CIImage) {
         answerLabel.text = Localized.answerLabelDefault
         
         guard let model = try? VNCoreMLModel(for: GoogLeNetPlaces().model) else { return }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailsViewController: UIViewController {
+final class ContactDetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
@@ -24,10 +24,23 @@ class ContactDetailsViewController: UIViewController {
             addressLabel.text = contact.address
             phoneNumberLabel.text = contact.phoneNumber
         }
+        setupPanGestureRecognizer()
+        setupUserActivity()
+    }
+    
+    override func updateUserActivityState(_ activity: NSUserActivity) {
+        if let userActivityUserInfo = contact?.userActivityUserInfo {
+            activity.addUserInfoEntries(from: userActivityUserInfo)
+        }
+    }
+    
+    private func setupPanGestureRecognizer() {
         let panGestureRed = UIPanGestureRecognizer()
         panGestureRed.addTarget(self, action: #selector(panGestureRecognizerHandler(_:)))
         view.addGestureRecognizer(panGestureRed)
-        
+    }
+    
+    private func setupUserActivity() {
         if let activity = contact?.userActivity {
             switch Settings.searchIndexingPreference {
             case .Disabled:
@@ -36,12 +49,6 @@ class ContactDetailsViewController: UIViewController {
                 activity.isEligibleForSearch = true
             }
             userActivity = activity
-        }
-    }
-    
-    override func updateUserActivityState(_ activity: NSUserActivity) {
-        if let userActivityUserInfo = contact?.userActivityUserInfo {
-            activity.addUserInfoEntries(from: userActivityUserInfo)
         }
     }
     

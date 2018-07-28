@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Swift.Void) {
         setupHomeViewController()
-        // Handle quick actions
-        completionHandler(handleQuickAction(shortcutItem: shortcutItem))
+        completionHandler(handleQuickAction(for: shortcutItem))
     }
     
     enum Shortcut: String {
@@ -34,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case pageControl = "Page"
     }
     
-    func handleQuickAction(shortcutItem: UIApplicationShortcutItem) -> Bool {
+    func handleQuickAction(for shortcutItem: UIApplicationShortcutItem) -> Bool {
         
         var quickActionHandled = false
-        let type = shortcutItem.type.components(separatedBy: (".")).last!
-        if let shortcutType = Shortcut.init(rawValue: type) {
+        if let type = shortcutItem.type.components(separatedBy: (".")).last,
+            let shortcutType = Shortcut.init(rawValue: type) {
             switch shortcutType {
             case .login:
                 homeViewController?.showScreen(0)

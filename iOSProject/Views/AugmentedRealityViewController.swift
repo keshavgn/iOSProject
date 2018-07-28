@@ -13,7 +13,7 @@ import HDAugmentedReality
 
 final class AugmentedRealityViewController: UIViewController {
 
-    struct Constant {
+    private struct Constant {
         static let results = "results"
         static let geometryLocationLat = "geometry.location.lat"
         static let geometryLocationLng = "geometry.location.lng"
@@ -39,7 +39,10 @@ final class AugmentedRealityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupLocationManager()
+    }
+    
+    private func setupLocationManager() {
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -49,7 +52,6 @@ final class AugmentedRealityViewController: UIViewController {
         } else {
             locationManager.startUpdatingLocation()
         }
-        locationManager.requestAlwaysAuthorization()
     }
 
     @IBAction func cameraAction(_ sender: Any) {

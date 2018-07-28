@@ -7,18 +7,21 @@
 */
 
 /* Home screen */
-"home_screen_title" = "iOS Project";
-"home_screen_back_title" = "Home";
+"home_screen.title" = "iOS Project";
+"home_screen.title_debug" = "iOS Project!";
+"home_screen.back_button_title" = "Home";
+"home_screen.siri_shortcut_name" = "Energize";
 
 /* Contacts screen */
-"contacts_screen_title" = "Contacts";
-"alert_delete_contact_title" = "Delete Contact";
-"alert_delete_contact_description" = "Are you sure, you want to delete contact";
+"contacts_screen.title" = "Contacts";
+"contacts_screen.logout_title" = "Logout";
+"alert_delete.contact_title" = "Delete Contact";
+"alert_delete.contact_description" = "Are you sure, you want to delete contact";
 
 /* Login scree */
-"login_screen_title" = "Login";
-"login_screen_login_fail" = "Login Failed";
-"login_screen_register_fail" = "Register Failed";
+"login_screen.title" = "Login";
+"login_screen.login_fail" = "Login Failed";
+"login_screen.register_fail" = "Register Failed";
 
 /* ML screen */
 "answer_label_default" = "detecting scene...";
@@ -28,5 +31,6 @@
 "cancel_button_title" = "Cancel";
 
 /*Page Control*/
-
-"pagecontrol_screen_title" = "Custom Page Control";
+"pagecontrol.title" = "Custom Page Control";
+"pagecontrol.like" = "Like";
+"pagecontrol.delete" = "Delete";

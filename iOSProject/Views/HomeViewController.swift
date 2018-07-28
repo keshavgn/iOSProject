@@ -35,16 +35,16 @@ final class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         #if RELEASE
-            title = Localized.homeScreenTitle
+            title = Localized.HomeScreen.title
         #elseif DEBUG
-            title = "iOS project"
+            title = Localized.HomeScreen.titleDebug
             print(keys.artsyAPIClientKey)
         #endif
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        title = Localized.homeScreenBackTitle
+        title = Localized.HomeScreen.backButtonTitle
     }
     
     func showScreen(_ index: Int) {
@@ -77,7 +77,7 @@ extension HomeViewController {
 
     func donateInteraction() {
         let intent = PhotoOfTheDayIntent()
-        intent.suggestedInvocationPhrase = "Energize"
+        intent.suggestedInvocationPhrase = Localized.HomeScreen.siriShortcutName
         
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { (error) in
