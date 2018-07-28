@@ -28,6 +28,6 @@
 		<string>com.apple.widget-extension</string>
 	</dict>
 	<key>UIApplicationShortcutWidget</key>
-	<string>jp.co.rakuten.ichiba.iOSToday</string>
+	<string>com.keshav.iOSProject.iOSToday</string>
 </dict>
 </plist>

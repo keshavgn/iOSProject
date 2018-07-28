@@ -6,7 +6,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)jp.co.rakuten.ichiba</string>
+		<string>$(AppIdentifierPrefix)com.keshav.iOSProject</string>
 		<string>$(AppIdentifierPrefix)fb1556430827739816</string>
 	</array>
 </dict>

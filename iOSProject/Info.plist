@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>jp.co.rakuten.ichiba</string>
+			<string>com.keshav.iOSProject</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1556430827739816</string>
@@ -55,7 +55,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>PhotoOfTheDayIntent</string>
-		<string>jp.co.rakuten.ichiba</string>
+		<string>com.keshav.iOSProject</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
