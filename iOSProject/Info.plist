@@ -77,5 +77,24 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Open login screen</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Login</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_NAME).Login</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Open page control screen</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Page Control</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_NAME).Page</string>
+		</dict>
+	</array>
 </dict>
 </plist>

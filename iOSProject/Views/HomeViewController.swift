@@ -47,6 +47,9 @@ final class HomeViewController: UIViewController {
         title = Localized.homeScreenBackTitle
     }
     
+    func showScreen(_ index: Int) {
+        performSegue(withIdentifier: viewModel.segueId(at: index), sender: nil)
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -65,7 +68,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        performSegue(withIdentifier: viewModel.segueId(at: indexPath.item), sender: nil)
+        showScreen(indexPath.item)
     }
 }
 

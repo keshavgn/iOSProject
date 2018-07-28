@@ -28,6 +28,7 @@ Extensions
 - iWatch
 - Today
 - Spotlight
+- 3D Touch
 
 
 Development Tools and third Party libraries
