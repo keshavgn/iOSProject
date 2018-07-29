@@ -25,6 +25,13 @@ enum Localized {
     static let contactTitle = Localized.tr("Localizable", "alert_delete.contact_title")
   }
 
+  enum Chatbot {
+    /// Send to Chat Bot
+    static let sendButtonTitle = Localized.tr("Localizable", "chatbot.send_button_title")
+    /// Chat Bot - Hotel booking
+    static let title = Localized.tr("Localizable", "chatbot.title")
+  }
+
   enum ContactsScreen {
     /// Logout
     static let logoutTitle = Localized.tr("Localizable", "contacts_screen.logout_title")
@@ -43,6 +50,11 @@ enum Localized {
     static let titleDebug = Localized.tr("Localizable", "home_screen.title_debug")
   }
 
+  enum ImageRecognition {
+    /// Image Recognition
+    static let title = Localized.tr("Localizable", "image_recognition.title")
+  }
+
   enum LoginScreen {
     /// Login Failed
     static let loginFail = Localized.tr("Localizable", "login_screen.login_fail")
@@ -50,6 +62,11 @@ enum Localized {
     static let registerFail = Localized.tr("Localizable", "login_screen.register_fail")
     /// Login
     static let title = Localized.tr("Localizable", "login_screen.title")
+  }
+
+  enum MlScreen {
+    /// Machine Learning
+    static let title = Localized.tr("Localizable", "ml_screen.title")
   }
 
   enum Pagecontrol {

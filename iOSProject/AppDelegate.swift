@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import FirebaseAuthUI
+import ApiAI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Settings.enableSpotlightSearch(true)
         FirebaseApp.configure()
         setupHomeViewController()
+        configureChatBot()
         return true
     }
     
@@ -55,6 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let homeViewController = controller.children.first as? HomeViewController {
             self.homeViewController = homeViewController
         }
+    }
+    
+    private func configureChatBot() {
+        let configuration = AIDefaultConfiguration()
+        configuration.clientAccessToken = "cbce3f1c34d245e5a8edc6aa4130eebb"
+        
+        let apiai = ApiAI.shared()
+        apiai?.configuration = configuration
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -15,6 +15,7 @@ target 'iOSProject' do
     pod 'SwiftGen'
     pod 'HDAugmentedReality', '~> 2.3'
     pod 'iOSFramework'
+    pod 'ApiAI'
 
 plugin 'cocoapods-keys', {
     :project => "iOSProject",

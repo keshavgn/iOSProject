@@ -15,6 +15,7 @@ Contacts
 
 Machine Learning
 - Image processing with CoreML
+- ChatBot with Dialogflow
 
 Augmented Reality
 - Displaying nearby points of interest with current position on Camera view with Maps
