@@ -16,6 +16,7 @@ target 'iOSProject' do
     pod 'HDAugmentedReality', '~> 2.3'
     pod 'iOSFramework'
     pod 'ApiAI'
+    pod 'Google-Mobile-Ads-SDK'
 
 plugin 'cocoapods-keys', {
     :project => "iOSProject",

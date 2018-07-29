@@ -27,22 +27,18 @@ class MLChatBotViewController: UIViewController {
     
 
     @IBAction func sendMessageToChatBot(_ sender: Any) {
+        guard let text = self.inputTextField.text, text != "" else { return }
         let request = ApiAI.shared().textRequest()
-        
-        if let text = self.inputTextField.text, text != "" {
-            request?.query = text
-        } else {
-            return
-        }
-        
-        request?.setMappedCompletionBlockSuccess({ (request, response) in
-            if let response = response as? AIResponse {
-                if let textResponse = response.result.fulfillment.speech {
-                    self.speechAndText(text: textResponse)
+        request?.query = text
+
+        request?.setMappedCompletionBlockSuccess({ [weak self] (request, response) in
+            guard let weakSelf = self, let response = response as? AIResponse else { return }
+            if let textResponse = response.result.fulfillment.messages.first, var speech = textResponse["speech"] as? String {
+                if speech.contains("[end]") {
+                    speech = speech.replacingOccurrences(of: "[end]", with: "")
+                    weakSelf.updateFinalStatus()
                 }
-                if let context = response.result.contexts {
-                    print(context)
-                }
+                weakSelf.speechAndText(text: speech)
             }
         }, failure: { (request, error) in
             print(error!)
@@ -51,6 +47,13 @@ class MLChatBotViewController: UIViewController {
         inputTextField.text = ""
     }
     
+    private func updateFinalStatus() {
+        sendButton.isHidden = true
+        inputTextField.resignFirstResponder()
+        inputTextField.isEnabled = false
+        textLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        textLabel.textColor = .green
+    }
     
     private func speechAndText(text: String) {
         let speechUtterance = AVSpeechUtterance(string: text)

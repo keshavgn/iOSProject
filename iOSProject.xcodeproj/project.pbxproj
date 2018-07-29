@@ -309,6 +309,7 @@
 		40D498E8210CA1C900C603CC /* MLImageRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLImageRecognitionViewController.swift; sourceTree = "<group>"; };
 		40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLChatBotViewController.swift; sourceTree = "<group>"; };
 		40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+iOS.swift"; sourceTree = "<group>"; };
+		40D498F0210D7E2800C603CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40D94C92203C585E00B71362 /* ContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 		40D94C94203CF9A900B71362 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
@@ -774,6 +775,7 @@
 		95DA1588F5CA6121D186D9D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40D498F0210D7E2800C603CC /* iAd.framework */,
 				CB035BC092D410630AC543CD /* Pods_iOSProject.framework */,
 				BA4DCC847D2BE32C095D0D2A /* Pods_iOSProjectTests.framework */,
 				8F31A068E858A7C81A10CAA5 /* Pods_iOSProjectUITests.framework */,

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import ApiAI
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Settings.enableSpotlightSearch(true)
         FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-1219653071957034~3949903786")
         setupHomeViewController()
         configureChatBot()
         return true

@@ -9,8 +9,13 @@
 import UIKit
 import Keys
 import Intents
+import GoogleMobileAds
 
 final class HomeViewController: UIViewController {
+
+    @IBOutlet weak var gadBannerView: GADBannerView!
+    let viewModel = HomeViewModel()
+    let keys = IOSProjectKeys()
 
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.flowLayout(type: .home))
@@ -21,8 +26,13 @@ final class HomeViewController: UIViewController {
         return collectionView
     }()
 
-    let viewModel = HomeViewModel()
-    let keys = IOSProjectKeys()
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-1219653071957034/9714308303"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        return adBannerView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +40,7 @@ final class HomeViewController: UIViewController {
         view.iOS_addSubview(collectionView)
         viewModel.registerCells(for: collectionView)
         donateInteraction()
+        adBannerView.load(GADRequest())
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -87,5 +98,17 @@ extension HomeViewController {
                 print("Successfully donated interaction")
             }
         }
+    }
+}
+
+
+extension HomeViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        gadBannerView.isHidden = false
+        gadBannerView = bannerView
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        gadBannerView.isHidden = true
     }
 }

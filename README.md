@@ -1,6 +1,7 @@
 # iOSProject
 Home Screen
 - Collection view with custom cells
+- Google Mobile Ad Banner
 
 Login
 - FireBase API for login & registration

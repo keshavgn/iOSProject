@@ -10,20 +10,23 @@ import UIKit
 
 final class HomeViewModel {
     
-    private var homeViewCellNames: [String] {
-        return ["FireBase", "MachineLearning", "AR", "PageControl"]
+    private enum Sections: String, CaseIterable {
+        case FireBase
+        case MachineLearning
+        case AR
+        case PageControl
     }
     
     var numberOfRows: Int {
-        return homeViewCellNames.count
+        return Sections.allCases.count
     }
 
     func cellTitle(at index: Int) -> String {
-        return homeViewCellNames[index]
+        return Sections.allCases[index].rawValue
     }
 
     func segueId(at index: Int) -> String {
-        return homeViewCellNames[index] + "SegueId"
+        return cellTitle(at: index) + "SegueId"
     }
     
     func registerCells(for collectionView: UICollectionView) {
