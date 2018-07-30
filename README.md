@@ -25,6 +25,9 @@ PageControl
 - Custom page control using collectionView
 - Peek & Pop on Collection view items
 
+Google Street View
+- Displaying Street view for the user current location.
+
 Extensions
 - iMessage 
 - iWatch
