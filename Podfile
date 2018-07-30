@@ -17,12 +17,17 @@ target 'iOSProject' do
     pod 'iOSFramework'
     pod 'ApiAI'
     pod 'Google-Mobile-Ads-SDK'
+    pod 'GoogleMaps'
 
 plugin 'cocoapods-keys', {
     :project => "iOSProject",
     :keys => [
     "ArtsyAPIClientSecret",
     "ArtsyAPIClientKey",
+    "MapsAPIKey",
+    "ChatBotId",
+    "AdUnitId",
+    "AdApplicationId",
     ]}
 
   target 'iOSProjectTests' do

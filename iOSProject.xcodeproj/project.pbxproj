@@ -90,6 +90,7 @@
 		40D498E9210CA1C900C603CC /* MLImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498E8210CA1C900C603CC /* MLImageRecognitionViewController.swift */; };
 		40D498EB210CA1DD00C603CC /* MLChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */; };
 		40D498ED210CAA4C00C603CC /* UIButton+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */; };
+		40D498F5210DC29F00C603CC /* GoogleStreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */; };
 		40D94C8D203AFE5A00B71362 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */; };
 		40D94C93203C585E00B71362 /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D94C92203C585E00B71362 /* ContactItem.swift */; };
 		40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D94C94203CF9A900B71362 /* CustomAlertView.swift */; };
@@ -310,6 +311,7 @@
 		40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLChatBotViewController.swift; sourceTree = "<group>"; };
 		40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+iOS.swift"; sourceTree = "<group>"; };
 		40D498F0210D7E2800C603CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStreetViewViewController.swift; sourceTree = "<group>"; };
 		40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40D94C92203C585E00B71362 /* ContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 		40D94C94203CF9A900B71362 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 				4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */,
 				40B2220720FB4F4D00A8541E /* PageControlViewController.swift */,
 				4012E6832107490600022D23 /* PeekToViewController.swift */,
+				40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1300,6 +1303,7 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
@@ -1311,6 +1315,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
@@ -1351,6 +1356,7 @@
 				40CFFF06203DABE400AF7328 /* ContactsViewModel.swift in Sources */,
 				40E7A4012038FD93004F23DA /* UserViewModel.swift in Sources */,
 				40E348FD204392600054C716 /* HomeViewCollectionViewCell.swift in Sources */,
+				40D498F5210DC29F00C603CC /* GoogleStreetViewViewController.swift in Sources */,
 				40B2220B20FB4F9E00A8541E /* PageControlCell.swift in Sources */,
 				403EE3212070B0D10051E627 /* DismissAnimator.swift in Sources */,
 				40D94C99203CFB5700B71362 /* UIView+iOS.swift in Sources */,

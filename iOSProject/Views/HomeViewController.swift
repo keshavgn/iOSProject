@@ -28,7 +28,7 @@ final class HomeViewController: UIViewController {
 
     lazy var adBannerView: GADBannerView = {
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        adBannerView.adUnitID = "ca-app-pub-1219653071957034/9714308303"
+        adBannerView.adUnitID = keys.adUnitId
         adBannerView.delegate = self
         adBannerView.rootViewController = self
         return adBannerView
@@ -49,7 +49,6 @@ final class HomeViewController: UIViewController {
             title = Localized.HomeScreen.title
         #elseif DEBUG
             title = Localized.HomeScreen.titleDebug
-            print(keys.artsyAPIClientKey)
         #endif
     }
     

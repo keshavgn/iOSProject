@@ -114,6 +114,11 @@ PODS:
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
   - Google-Mobile-Ads-SDK (7.31.0)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -182,6 +187,7 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - FirebaseUI/Phone
   - Google-Mobile-Ads-SDK
+  - GoogleMaps
   - HDAugmentedReality (~> 2.3)
   - iOSFramework
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -204,6 +210,7 @@ SPEC REPOS:
     - FirebaseStorage
     - FirebaseUI
     - Google-Mobile-Ads-SDK
+    - GoogleMaps
     - GoogleSignIn
     - GoogleToolboxForMac
     - gRPC
@@ -243,6 +250,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: 0cca42d9b889a0227c3a50121f45a4469fc9eb27
   FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
   Google-Mobile-Ads-SDK: 6e529e748b45507a2ca904e0b5a52669ba3920c4
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   gRPC: 9362451032695e2dfb7bafcd3740e3a27939e4ff
@@ -262,6 +270,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: e560149cf8a67b4b96b250fcdc3d81994e188b02
+PODFILE CHECKSUM: 02802cea68c508ac40927c870a8883dccf1005fd
 
 COCOAPODS: 1.5.2

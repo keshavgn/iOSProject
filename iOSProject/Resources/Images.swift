@@ -44,6 +44,9 @@ struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 enum Asset {
+  static let ar = ImageAsset(name: "AR")
+  static let fireBase = ImageAsset(name: "FireBase")
+  static let googleSteetView = ImageAsset(name: "GoogleSteetView")
   static let icon1 = ImageAsset(name: "Icon1")
   static let icon10 = ImageAsset(name: "Icon10")
   static let icon11 = ImageAsset(name: "Icon11")
@@ -56,6 +59,8 @@ enum Asset {
   static let icon7 = ImageAsset(name: "Icon7")
   static let icon8 = ImageAsset(name: "Icon8")
   static let icon9 = ImageAsset(name: "Icon9")
+  static let machineLearning = ImageAsset(name: "MachineLearning")
+  static let pageControl = ImageAsset(name: "PageControl")
   static let arrowUp = ImageAsset(name: "arrow_up")
   static let close = ImageAsset(name: "close")
   static let hdarClose = ImageAsset(name: "hdar_close")
@@ -66,6 +71,9 @@ enum Asset {
   static let allColors: [ColorAsset] = [
   ]
   static let allImages: [ImageAsset] = [
+    ar,
+    fireBase,
+    googleSteetView,
     icon1,
     icon10,
     icon11,
@@ -78,6 +86,8 @@ enum Asset {
     icon7,
     icon8,
     icon9,
+    machineLearning,
+    pageControl,
     arrowUp,
     close,
     hdarClose,

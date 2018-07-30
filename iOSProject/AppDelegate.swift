@@ -10,17 +10,22 @@ import UIKit
 import Firebase
 import ApiAI
 import GoogleMobileAds
+import GoogleMaps
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var homeViewController: HomeViewController?
+    let keys = IOSProjectKeys()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Settings.enableSpotlightSearch(true)
         FirebaseApp.configure()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-1219653071957034~3949903786")
+        GADMobileAds.configure(withApplicationID: keys.adApplicationId)
+        GMSServices.provideAPIKey(keys.mapsAPIKey)
+        print(keys.mapsAPIKey)
         setupHomeViewController()
         configureChatBot()
         return true
@@ -62,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureChatBot() {
         let configuration = AIDefaultConfiguration()
-        configuration.clientAccessToken = "cbce3f1c34d245e5a8edc6aa4130eebb"
+        configuration.clientAccessToken = keys.chatBotId
         
         let apiai = ApiAI.shared()
         apiai?.configuration = configuration

@@ -11,6 +11,7 @@ import UIKit
 final class HomeViewCollectionViewCell: UICollectionViewCell, Cardable, Identifiable {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,7 @@ final class HomeViewCollectionViewCell: UICollectionViewCell, Cardable, Identifi
     
     func style(title: String) {
         titleLabel.text = title
+        imageView.image = UIImage(named: title)
     }
 
 }

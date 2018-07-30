@@ -15,6 +15,7 @@ final class HomeViewModel {
         case MachineLearning
         case AR
         case PageControl
+        case GoogleSteetView
     }
     
     var numberOfRows: Int {

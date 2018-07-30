@@ -13,9 +13,15 @@ fi
 > $ENVIRONMENT_FILE
 
 # Copy secret keys to .env file
-echo "export ArtsyAPIClientSecret=\"keshav\"" >> $ENVIRONMENT_FILE
+echo "export artsyAPIClientSecret=\"ios-project\"" >> $ENVIRONMENT_FILE
+echo "export artsyAPIClientKey=\"keshav\"" >> $ENVIRONMENT_FILE
+echo "export MapsAPIKey=\"AIzaSyBD40k8I-GkISlVfzkGUlRdQ-Bf3YEttzg\"" >> $ENVIRONMENT_FILE
 
-echo "export ArtsyAPIClientKey=\"keshavmurthy\"" >> $ENVIRONMENT_FILE
+echo "export ChatBotId=\"cbce3f1c34d245e5a8edc6aa4130eebb\"" >> $ENVIRONMENT_FILE
+
+echo "export AdUnitId=\"ca-app-pub-1219653071957034/9714308303\"" >> $ENVIRONMENT_FILE
+
+echo "export AdApplicationId=\"ca-app-pub-1219653071957034~3949903786\"" >> $ENVIRONMENT_FILE
 
 
 # End
