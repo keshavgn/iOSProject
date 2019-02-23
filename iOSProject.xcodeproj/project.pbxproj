@@ -87,6 +87,10 @@
 		40CFFF11203E7AF500AF7328 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF10203E7AF500AF7328 /* AddContactViewController.swift */; };
 		40CFFF13203EF05400AF7328 /* CardViewLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF12203EF05400AF7328 /* CardViewLayoutable.swift */; };
 		40CFFF15203EF10E00AF7328 /* CardViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFFF14203EF10E00AF7328 /* CardViewConfiguration.swift */; };
+		40D498E9210CA1C900C603CC /* MLImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498E8210CA1C900C603CC /* MLImageRecognitionViewController.swift */; };
+		40D498EB210CA1DD00C603CC /* MLChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */; };
+		40D498ED210CAA4C00C603CC /* UIButton+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */; };
+		40D498F5210DC29F00C603CC /* GoogleStreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */; };
 		40D94C8D203AFE5A00B71362 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */; };
 		40D94C93203C585E00B71362 /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D94C92203C585E00B71362 /* ContactItem.swift */; };
 		40D94C95203CF9A900B71362 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D94C94203CF9A900B71362 /* CustomAlertView.swift */; };
@@ -303,6 +307,11 @@
 		40CFFF10203E7AF500AF7328 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		40CFFF12203EF05400AF7328 /* CardViewLayoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewLayoutable.swift; sourceTree = "<group>"; };
 		40CFFF14203EF10E00AF7328 /* CardViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewConfiguration.swift; sourceTree = "<group>"; };
+		40D498E8210CA1C900C603CC /* MLImageRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLImageRecognitionViewController.swift; sourceTree = "<group>"; };
+		40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLChatBotViewController.swift; sourceTree = "<group>"; };
+		40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+iOS.swift"; sourceTree = "<group>"; };
+		40D498F0210D7E2800C603CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStreetViewViewController.swift; sourceTree = "<group>"; };
 		40D94C8C203AFE5A00B71362 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		40D94C92203C585E00B71362 /* ContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 		40D94C94203CF9A900B71362 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
@@ -589,10 +598,13 @@
 				403EE31E206FC7100051E627 /* ContactDetailsViewController.swift */,
 				405B25262032E71C00054469 /* LoginViewController.swift */,
 				40E349012043E7F00054C716 /* MachineLearningViewController.swift */,
+				40D498E8210CA1C900C603CC /* MLImageRecognitionViewController.swift */,
+				40D498EA210CA1DD00C603CC /* MLChatBotViewController.swift */,
 				40315C8920687366008E492E /* AugmentedRealityViewController.swift */,
 				4069CC752082488D00FB33BF /* ForgotPasswordViewController.swift */,
 				40B2220720FB4F4D00A8541E /* PageControlViewController.swift */,
 				4012E6832107490600022D23 /* PeekToViewController.swift */,
+				40D498F4210DC29F00C603CC /* GoogleStreetViewViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -695,6 +707,7 @@
 				403EE3222070BCD50051E627 /* StoryBoard+iOS.swift */,
 				4078B0B520FB832C00BBEB7D /* CALayer+iOS.swift */,
 				4078B10F20FCC48E00BBEB7D /* URL+iOS.swift */,
+				40D498EC210CAA4C00C603CC /* UIButton+iOS.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -765,6 +778,7 @@
 		95DA1588F5CA6121D186D9D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40D498F0210D7E2800C603CC /* iAd.framework */,
 				CB035BC092D410630AC543CD /* Pods_iOSProject.framework */,
 				BA4DCC847D2BE32C095D0D2A /* Pods_iOSProjectTests.framework */,
 				8F31A068E858A7C81A10CAA5 /* Pods_iOSProjectUITests.framework */,
@@ -1174,6 +1188,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -1196,6 +1211,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -1287,6 +1303,7 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
@@ -1298,6 +1315,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
@@ -1328,6 +1346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D498EB210CA1DD00C603CC /* MLChatBotViewController.swift in Sources */,
 				4078B10C20FCC43800BBEB7D /* PhotoInfo.swift in Sources */,
 				40CFFF11203E7AF500AF7328 /* AddContactViewController.swift in Sources */,
 				405B24EB20328E5B00054469 /* AppDelegate.swift in Sources */,
@@ -1337,6 +1356,7 @@
 				40CFFF06203DABE400AF7328 /* ContactsViewModel.swift in Sources */,
 				40E7A4012038FD93004F23DA /* UserViewModel.swift in Sources */,
 				40E348FD204392600054C716 /* HomeViewCollectionViewCell.swift in Sources */,
+				40D498F5210DC29F00C603CC /* GoogleStreetViewViewController.swift in Sources */,
 				40B2220B20FB4F9E00A8541E /* PageControlCell.swift in Sources */,
 				403EE3212070B0D10051E627 /* DismissAnimator.swift in Sources */,
 				40D94C99203CFB5700B71362 /* UIView+iOS.swift in Sources */,
@@ -1353,6 +1373,7 @@
 				405B25252032E23900054469 /* CoreDataManager.swift in Sources */,
 				4078B10920FCC28900BBEB7D /* PhotoOfTheDayIntentHandler.swift in Sources */,
 				4078B10E20FCC45100BBEB7D /* PhotoViewModel.swift in Sources */,
+				40D498E9210CA1C900C603CC /* MLImageRecognitionViewController.swift in Sources */,
 				4069CC7420822D8200FB33BF /* Settings.swift in Sources */,
 				4078B10220FCBD2D00BBEB7D /* Intents.intentdefinition in Sources */,
 				403EE31F206FC7100051E627 /* ContactDetailsViewController.swift in Sources */,
@@ -1373,6 +1394,7 @@
 				4078B0B620FB832C00BBEB7D /* CALayer+iOS.swift in Sources */,
 				40478E16205B9E9200161FCE /* Strings.swift in Sources */,
 				40F4B3222045476D001428A3 /* Utility.swift in Sources */,
+				40D498ED210CAA4C00C603CC /* UIButton+iOS.swift in Sources */,
 				40315C8D2068771E008E492E /* PlacesLoader.swift in Sources */,
 				40E348F9204392240054C716 /* HomeViewModel.swift in Sources */,
 				40E348F020403C840054C716 /* UIEdgeInsets+iOS.swift in Sources */,

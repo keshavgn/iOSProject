@@ -15,12 +15,19 @@ target 'iOSProject' do
     pod 'SwiftGen'
     pod 'HDAugmentedReality', '~> 2.3'
     pod 'iOSFramework'
+    pod 'ApiAI'
+    pod 'Google-Mobile-Ads-SDK'
+    pod 'GoogleMaps'
 
 plugin 'cocoapods-keys', {
     :project => "iOSProject",
     :keys => [
     "ArtsyAPIClientSecret",
     "ArtsyAPIClientKey",
+    "MapsAPIKey",
+    "ChatBotId",
+    "AdUnitId",
+    "AdApplicationId",
     ]}
 
   target 'iOSProjectTests' do

@@ -1,6 +1,7 @@
 # iOSProject
 Home Screen
 - Collection view with custom cells
+- Google Mobile Ad Banner
 
 Login
 - FireBase API for login & registration
@@ -15,6 +16,7 @@ Contacts
 
 Machine Learning
 - Image processing with CoreML
+- ChatBot with Dialogflow
 
 Augmented Reality
 - Displaying nearby points of interest with current position on Camera view with Maps
@@ -22,6 +24,9 @@ Augmented Reality
 PageControl
 - Custom page control using collectionView
 - Peek & Pop on Collection view items
+
+Google Street View
+- Displaying Street view for the user current location.
 
 Extensions
 - iMessage 

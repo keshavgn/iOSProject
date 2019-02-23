@@ -1,4 +1,29 @@
 PODS:
+  - ApiAI (0.7.2):
+    - ApiAI/AudioFileConverter (= 0.7.2)
+    - ApiAI/Core (= 0.7.2)
+    - ApiAI/Events (= 0.7.2)
+    - ApiAI/ResponseMapping (= 0.7.2)
+    - ApiAI/UIKit (= 0.7.2)
+    - ApiAI/UserEntities (= 0.7.2)
+    - ApiAI/VoiceFileRequest (= 0.7.2)
+    - ApiAI/VoiceRequest (= 0.7.2)
+  - ApiAI/AudioFileConverter (0.7.2):
+    - ApiAI/Core
+  - ApiAI/Core (0.7.2)
+  - ApiAI/Events (0.7.2):
+    - ApiAI/Core
+  - ApiAI/ResponseMapping (0.7.2):
+    - ApiAI/Core
+  - ApiAI/UIKit (0.7.2):
+    - ApiAI/Core
+    - ApiAI/VoiceRequest
+  - ApiAI/UserEntities (0.7.2):
+    - ApiAI/Core
+  - ApiAI/VoiceFileRequest (0.7.2):
+    - ApiAI/Core
+  - ApiAI/VoiceRequest (0.7.2):
+    - ApiAI/Core
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -88,6 +113,12 @@ PODS:
   - FirebaseUI/Twitter (4.5.5):
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
+  - Google-Mobile-Ads-SDK (7.31.0)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -148,12 +179,15 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
+  - ApiAI
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - FirebaseUI
   - FirebaseUI/Google
   - FirebaseUI/Phone
+  - Google-Mobile-Ads-SDK
+  - GoogleMaps
   - HDAugmentedReality (~> 2.3)
   - iOSFramework
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -161,6 +195,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ApiAI
     - Bolts
     - BoringSSL
     - FBSDKCoreKit
@@ -174,6 +209,8 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseStorage
     - FirebaseUI
+    - Google-Mobile-Ads-SDK
+    - GoogleMaps
     - GoogleSignIn
     - GoogleToolboxForMac
     - gRPC
@@ -198,6 +235,7 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  ApiAI: d4b49d3736f33ce6f3ef66dc33c0e0fccb23579e
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
@@ -211,6 +249,8 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 24958382a1011bba5aaff37e334e7a650b9118f5
   FirebaseStorage: 0cca42d9b889a0227c3a50121f45a4469fc9eb27
   FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
+  Google-Mobile-Ads-SDK: 6e529e748b45507a2ca904e0b5a52669ba3920c4
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   gRPC: 9362451032695e2dfb7bafcd3740e3a27939e4ff
@@ -230,6 +270,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 6ff36bbd2d0a4d567f6c278a21fc791972479a28
+PODFILE CHECKSUM: 02802cea68c508ac40927c870a8883dccf1005fd
 
 COCOAPODS: 1.5.2

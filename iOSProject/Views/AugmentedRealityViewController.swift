@@ -32,6 +32,7 @@ final class AugmentedRealityViewController: UIViewController {
     }
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var cameraBarButtonItem: UIBarButtonItem!
     
     fileprivate var startedLoadingPOIs = false
     fileprivate var places = [Place]()
@@ -40,6 +41,7 @@ final class AugmentedRealityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLocationManager()
+        navigationItem.rightBarButtonItem = cameraBarButtonItem
     }
     
     private func setupLocationManager() {

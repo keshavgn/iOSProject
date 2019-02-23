@@ -24,11 +24,16 @@
 "login_screen.register_fail" = "Register Failed";
 
 /* ML screen */
+"ml_screen.title" = "Machine Learning";
+"image_recognition.title" = "Image Recognition";
 "answer_label_default" = "detecting scene...";
 "inital_label_default" = "Add image from Camera/Gallery";
 "camera_button_title" = "Camera";
 "gallery_button_title" = "Gallery";
 "cancel_button_title" = "Cancel";
+
+"chatbot.title" = "Chat Bot - Hotel booking";
+"chatbot.send_button_title" = "Send to Chat Bot";
 
 /*Page Control*/
 "pagecontrol.title" = "Custom Page Control";
