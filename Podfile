@@ -3,7 +3,7 @@ source "https://github.com/CocoaPods/Specs.git"
 source "https://github.com/keshavgn/iOSFramework.git"
 
 use_frameworks!
-platform :ios, '12.0'
+platform :ios, '13.0'
 
 target 'iOSProject' do
     pod 'Firebase/Core'
