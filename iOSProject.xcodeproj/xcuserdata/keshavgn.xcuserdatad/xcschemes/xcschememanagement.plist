@@ -7,17 +7,17 @@
 		<key>Siri.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>51</integer>
+			<integer>52</integer>
 		</dict>
 		<key>SiriUI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>52</integer>
+			<integer>51</integer>
 		</dict>
 		<key>iOSMessage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>46</integer>
+			<integer>49</integer>
 		</dict>
 		<key>iOSProject.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,12 +27,12 @@
 		<key>iOSSpotlight.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>49</integer>
+			<integer>48</integer>
 		</dict>
 		<key>iOSToday.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>48</integer>
+			<integer>47</integer>
 		</dict>
 		<key>iOSWatch (Glance).xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,7 +47,7 @@
 		<key>iOSWatch.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>47</integer>
+			<integer>46</integer>
 		</dict>
 	</dict>
 </dict>

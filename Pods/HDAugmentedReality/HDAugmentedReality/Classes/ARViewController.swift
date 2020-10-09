@@ -125,8 +125,8 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
         self.trackingManager.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(ARViewController.locationNotification(_:)), name: NSNotification.Name(rawValue: "kNotificationLocationSet"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ARViewController.appWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ARViewController.appDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ARViewController.appWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ARViewController.appDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         self.initialize()
     }
     
@@ -402,7 +402,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
         self.cameraView.startRunning()
         self.trackingManager.startTracking(notifyLocationFailure: notifyLocationFailure)
         self.displayTimer = CADisplayLink(target: self, selector: #selector(ARViewController.displayTimerTick))
-        self.displayTimer?.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
+        self.displayTimer?.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
     }
     
     fileprivate func stopCameraAndTracking()

@@ -7,11 +7,6 @@
 //
 
 import Firebase
-import FirebaseAuthUI
-import FirebaseGoogleAuthUI
-import FirebaseFacebookAuthUI
-import FirebaseTwitterAuthUI
-import FirebasePhoneAuthUI
 
 final class UserViewModel {
     
@@ -21,9 +16,9 @@ final class UserViewModel {
         } else if isValidPassword(password) {
             return completion(false, "Invalid passwod\n Combination of least 1 small and 1 big, 1 digit, 1 special and minimum 8 letters")
         }
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User, error: Error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: AuthDataResult?, error: Error?) in
             completion(true, "")
-        } as? AuthResultCallback)
+        })
     }
     
     func loginUser(email: String, password: String, completion: @escaping ((Bool, String) -> Void)) {
@@ -32,7 +27,7 @@ final class UserViewModel {
         } else if isValidPassword(password) {
             return completion(false, "Invalid passwod\n Combination of least 1 small and 1 big, 1 digit, 1 special and minimum 8 letters")
         }
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user: User?, error: Error?) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user: AuthDataResult?, error: Error?) in
             completion(error == nil, error?.localizedDescription ?? "")
         })
     }

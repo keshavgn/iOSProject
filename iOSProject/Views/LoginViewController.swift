@@ -9,11 +9,7 @@
 
 import UIKit
 import Firebase
-import FirebaseAuthUI
-import FirebaseGoogleAuthUI
-import FirebaseFacebookAuthUI
-import FirebaseTwitterAuthUI
-import FirebasePhoneAuthUI
+import FirebaseUI
 
 final class LoginViewController: BaseViewController {
     
@@ -57,7 +53,7 @@ final class LoginViewController: BaseViewController {
     @IBAction func webLogin(_ sender: Any) {
         let authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
-        let providers: [FUIAuthProvider] = [ FUIGoogleAuth(), FUIFacebookAuth(), FUITwitterAuth()]
+        let providers: [FUIAuthProvider] = [ FUIGoogleAuth(), FUIFacebookAuth()]
         authUI?.providers = providers
         
         let authViewController = authUI!.authViewController()

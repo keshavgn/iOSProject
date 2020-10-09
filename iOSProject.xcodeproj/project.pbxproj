@@ -123,6 +123,10 @@
 		40F4B31E20451FCA001428A3 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 40F4B31D20451FC9001428A3 /* GoogLeNetPlaces.mlmodel */; };
 		40F4B3222045476D001428A3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4B3212045476D001428A3 /* Utility.swift */; };
 		7B3431D2BBED97BD633F9D4E /* Pods_iOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F31A068E858A7C81A10CAA5 /* Pods_iOSProjectUITests.framework */; };
+		82632A352530A5140099607E /* HealthKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82632A312530A5130099607E /* HealthKit.storyboard */; };
+		82632A362530A5140099607E /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82632A322530A5130099607E /* AR.storyboard */; };
+		82632A372530A5140099607E /* MachineLearning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82632A332530A5140099607E /* MachineLearning.storyboard */; };
+		82632A382530A5140099607E /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82632A342530A5140099607E /* Contacts.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,6 +351,10 @@
 		40F23EE92057C01D001FCA74 /* FlightsDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FlightsDetail.json; sourceTree = "<group>"; };
 		40F4B31D20451FC9001428A3 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		40F4B3212045476D001428A3 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		82632A312530A5130099607E /* HealthKit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HealthKit.storyboard; sourceTree = "<group>"; };
+		82632A322530A5130099607E /* AR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		82632A332530A5140099607E /* MachineLearning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MachineLearning.storyboard; sourceTree = "<group>"; };
+		82632A342530A5140099607E /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		8F31A068E858A7C81A10CAA5 /* Pods_iOSProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D4EC9EEDC33924C88623BC /* Pods-iOSProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectUITests/Pods-iOSProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ACB6BBA822E000AB05E76961 /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -570,6 +578,10 @@
 		405B251D20328ECD00054469 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				82632A322530A5130099607E /* AR.storyboard */,
+				82632A342530A5140099607E /* Contacts.storyboard */,
+				82632A312530A5130099607E /* HealthKit.storyboard */,
+				82632A332530A5140099607E /* MachineLearning.storyboard */,
 				405B24EE20328E5B00054469 /* Main.storyboard */,
 			);
 			path = StoryBoards;
@@ -1095,11 +1107,15 @@
 				405B24F820328E5B00054469 /* LaunchScreen.storyboard in Resources */,
 				40E348FE204392600054C716 /* HomeViewCollectionViewCell.xib in Resources */,
 				40478E11205B9D2300161FCE /* swiftgen.yml in Resources */,
+				82632A382530A5140099607E /* Contacts.storyboard in Resources */,
 				404079CA2053E774005A6600 /* Localizable.strings in Resources */,
 				40D94C8D203AFE5A00B71362 /* GoogleService-Info.plist in Resources */,
 				40B2220C20FB4F9E00A8541E /* PageControlCell.xib in Resources */,
 				405B24F520328E5B00054469 /* Assets.xcassets in Resources */,
+				82632A352530A5140099607E /* HealthKit.storyboard in Resources */,
 				405B24F020328E5B00054469 /* Main.storyboard in Resources */,
+				82632A362530A5140099607E /* AR.storyboard in Resources */,
+				82632A372530A5140099607E /* MachineLearning.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

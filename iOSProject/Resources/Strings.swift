@@ -1,90 +1,106 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 import Foundation
 
-// swiftlint:disable superfluous_disable_command
-// swiftlint:disable file_length
+// swiftlint:disable superfluous_disable_command file_length implicit_return
 
-// swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
-enum Localized {
+// MARK: - Strings
+
+// swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
+internal enum Localized {
   /// detecting scene...
-  static let answerLabelDefault = Localized.tr("Localizable", "answer_label_default")
+  internal static let answerLabelDefault = Localized.tr("Localizable", "answer_label_default")
   /// Camera
-  static let cameraButtonTitle = Localized.tr("Localizable", "camera_button_title")
+  internal static let cameraButtonTitle = Localized.tr("Localizable", "camera_button_title")
   /// Cancel
-  static let cancelButtonTitle = Localized.tr("Localizable", "cancel_button_title")
+  internal static let cancelButtonTitle = Localized.tr("Localizable", "cancel_button_title")
   /// Gallery
-  static let galleryButtonTitle = Localized.tr("Localizable", "gallery_button_title")
+  internal static let galleryButtonTitle = Localized.tr("Localizable", "gallery_button_title")
   /// Add image from Camera/Gallery
-  static let initalLabelDefault = Localized.tr("Localizable", "inital_label_default")
+  internal static let initalLabelDefault = Localized.tr("Localizable", "inital_label_default")
 
-  enum AlertDelete {
+  internal enum AlertDelete {
     /// Are you sure, you want to delete contact
-    static let contactDescription = Localized.tr("Localizable", "alert_delete.contact_description")
+    internal static let contactDescription = Localized.tr("Localizable", "alert_delete.contact_description")
     /// Delete Contact
-    static let contactTitle = Localized.tr("Localizable", "alert_delete.contact_title")
+    internal static let contactTitle = Localized.tr("Localizable", "alert_delete.contact_title")
   }
 
-  enum Chatbot {
+  internal enum Chatbot {
     /// Send to Chat Bot
-    static let sendButtonTitle = Localized.tr("Localizable", "chatbot.send_button_title")
+    internal static let sendButtonTitle = Localized.tr("Localizable", "chatbot.send_button_title")
     /// Chat Bot - Hotel booking
-    static let title = Localized.tr("Localizable", "chatbot.title")
+    internal static let title = Localized.tr("Localizable", "chatbot.title")
   }
 
-  enum ContactsScreen {
+  internal enum ContactsScreen {
     /// Logout
-    static let logoutTitle = Localized.tr("Localizable", "contacts_screen.logout_title")
+    internal static let logoutTitle = Localized.tr("Localizable", "contacts_screen.logout_title")
     /// Contacts
-    static let title = Localized.tr("Localizable", "contacts_screen.title")
+    internal static let title = Localized.tr("Localizable", "contacts_screen.title")
   }
 
-  enum HomeScreen {
+  internal enum HomeScreen {
     /// Home
-    static let backButtonTitle = Localized.tr("Localizable", "home_screen.back_button_title")
+    internal static let backButtonTitle = Localized.tr("Localizable", "home_screen.back_button_title")
     /// Energize
-    static let siriShortcutName = Localized.tr("Localizable", "home_screen.siri_shortcut_name")
+    internal static let siriShortcutName = Localized.tr("Localizable", "home_screen.siri_shortcut_name")
     /// iOS Project
-    static let title = Localized.tr("Localizable", "home_screen.title")
+    internal static let title = Localized.tr("Localizable", "home_screen.title")
     /// iOS Project!
-    static let titleDebug = Localized.tr("Localizable", "home_screen.title_debug")
+    internal static let titleDebug = Localized.tr("Localizable", "home_screen.title_debug")
   }
 
-  enum ImageRecognition {
+  internal enum ImageRecognition {
     /// Image Recognition
-    static let title = Localized.tr("Localizable", "image_recognition.title")
+    internal static let title = Localized.tr("Localizable", "image_recognition.title")
   }
 
-  enum LoginScreen {
+  internal enum LoginScreen {
     /// Login Failed
-    static let loginFail = Localized.tr("Localizable", "login_screen.login_fail")
+    internal static let loginFail = Localized.tr("Localizable", "login_screen.login_fail")
     /// Register Failed
-    static let registerFail = Localized.tr("Localizable", "login_screen.register_fail")
+    internal static let registerFail = Localized.tr("Localizable", "login_screen.register_fail")
     /// Login
-    static let title = Localized.tr("Localizable", "login_screen.title")
+    internal static let title = Localized.tr("Localizable", "login_screen.title")
   }
 
-  enum MlScreen {
+  internal enum MlScreen {
     /// Machine Learning
-    static let title = Localized.tr("Localizable", "ml_screen.title")
+    internal static let title = Localized.tr("Localizable", "ml_screen.title")
   }
 
-  enum Pagecontrol {
+  internal enum Pagecontrol {
     /// Delete
-    static let delete = Localized.tr("Localizable", "pagecontrol.delete")
+    internal static let delete = Localized.tr("Localizable", "pagecontrol.delete")
     /// Like
-    static let like = Localized.tr("Localizable", "pagecontrol.like")
+    internal static let like = Localized.tr("Localizable", "pagecontrol.like")
     /// Custom Page Control
-    static let title = Localized.tr("Localizable", "pagecontrol.title")
+    internal static let title = Localized.tr("Localizable", "pagecontrol.title")
   }
 }
-// swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
+// swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
+
+// MARK: - Implementation Details
 
 extension Localized {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
-    let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
+    let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)
   }
 }
 
-private final class BundleToken {}
+// swiftlint:disable convenience_type
+private final class BundleToken {
+  static let bundle: Bundle = {
+    #if SWIFT_PACKAGE
+    return Bundle.module
+    #else
+    return Bundle(for: BundleToken.self)
+    #endif
+  }()
+}
+// swiftlint:enable convenience_type

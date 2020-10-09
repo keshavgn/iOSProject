@@ -1,114 +1,85 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
-#if os(OSX)
-  import AppKit.NSImage
-  typealias AssetColorTypeAlias = NSColor
-  typealias Image = NSImage
-#elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIImage
-  typealias AssetColorTypeAlias = UIColor
-  typealias Image = UIImage
+#if os(macOS)
+  import AppKit
+#elseif os(iOS)
+  import UIKit
+#elseif os(tvOS) || os(watchOS)
+  import UIKit
 #endif
 
-// swiftlint:disable superfluous_disable_command
-// swiftlint:disable file_length
+// Deprecated typealiases
+@available(*, deprecated, renamed: "ImageAsset.Image", message: "This typealias will be removed in SwiftGen 7.0")
+internal typealias AssetImageTypeAlias = ImageAsset.Image
 
-@available(*, deprecated, renamed: "ImageAsset")
-typealias AssetType = ImageAsset
+// swiftlint:disable superfluous_disable_command file_length implicit_return
 
-struct ImageAsset {
-  fileprivate var name: String
+// MARK: - Asset Catalogs
 
-  var image: Image {
-    let bundle = Bundle(for: BundleToken.self)
+// swiftlint:disable identifier_name line_length nesting type_body_length type_name
+internal enum Asset {
+  internal static let ar = ImageAsset(name: "AR")
+  internal static let fireBase = ImageAsset(name: "FireBase")
+  internal static let googleSteetView = ImageAsset(name: "GoogleSteetView")
+  internal static let icon1 = ImageAsset(name: "Icon1")
+  internal static let icon10 = ImageAsset(name: "Icon10")
+  internal static let icon11 = ImageAsset(name: "Icon11")
+  internal static let icon12 = ImageAsset(name: "Icon12")
+  internal static let icon2 = ImageAsset(name: "Icon2")
+  internal static let icon3 = ImageAsset(name: "Icon3")
+  internal static let icon4 = ImageAsset(name: "Icon4")
+  internal static let icon5 = ImageAsset(name: "Icon5")
+  internal static let icon6 = ImageAsset(name: "Icon6")
+  internal static let icon7 = ImageAsset(name: "Icon7")
+  internal static let icon8 = ImageAsset(name: "Icon8")
+  internal static let icon9 = ImageAsset(name: "Icon9")
+  internal static let machineLearning = ImageAsset(name: "MachineLearning")
+  internal static let pageControl = ImageAsset(name: "PageControl")
+  internal static let arrowUp = ImageAsset(name: "arrow_up")
+  internal static let close = ImageAsset(name: "close")
+  internal static let hdarClose = ImageAsset(name: "hdar_close")
+  internal static let icon = ImageAsset(name: "icon")
+  internal static let trashBin = ImageAsset(name: "trash_bin")
+}
+// swiftlint:enable identifier_name line_length nesting type_body_length type_name
+
+// MARK: - Implementation Details
+
+internal struct ImageAsset {
+  internal fileprivate(set) var name: String
+
+  #if os(macOS)
+  internal typealias Image = NSImage
+  #elseif os(iOS) || os(tvOS) || os(watchOS)
+  internal typealias Image = UIImage
+  #endif
+
+  internal var image: Image {
+    let bundle = BundleToken.bundle
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
-    #elseif os(OSX)
-    let image = bundle.image(forResource: NSImage.Name(name))
+    #elseif os(macOS)
+    let name = NSImage.Name(self.name)
+    let image = (bundle == .main) ? NSImage(named: name) : bundle.image(forResource: name)
     #elseif os(watchOS)
     let image = Image(named: name)
     #endif
-    guard let result = image else { fatalError("Unable to load image named \(name).") }
+    guard let result = image else {
+      fatalError("Unable to load image named \(name).")
+    }
     return result
   }
 }
 
-struct ColorAsset {
-  fileprivate var name: String
-
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  var color: AssetColorTypeAlias {
-    return AssetColorTypeAlias(asset: self)
-  }
-}
-
-// swiftlint:disable identifier_name line_length nesting type_body_length type_name
-enum Asset {
-  static let ar = ImageAsset(name: "AR")
-  static let fireBase = ImageAsset(name: "FireBase")
-  static let googleSteetView = ImageAsset(name: "GoogleSteetView")
-  static let icon1 = ImageAsset(name: "Icon1")
-  static let icon10 = ImageAsset(name: "Icon10")
-  static let icon11 = ImageAsset(name: "Icon11")
-  static let icon12 = ImageAsset(name: "Icon12")
-  static let icon2 = ImageAsset(name: "Icon2")
-  static let icon3 = ImageAsset(name: "Icon3")
-  static let icon4 = ImageAsset(name: "Icon4")
-  static let icon5 = ImageAsset(name: "Icon5")
-  static let icon6 = ImageAsset(name: "Icon6")
-  static let icon7 = ImageAsset(name: "Icon7")
-  static let icon8 = ImageAsset(name: "Icon8")
-  static let icon9 = ImageAsset(name: "Icon9")
-  static let machineLearning = ImageAsset(name: "MachineLearning")
-  static let pageControl = ImageAsset(name: "PageControl")
-  static let arrowUp = ImageAsset(name: "arrow_up")
-  static let close = ImageAsset(name: "close")
-  static let hdarClose = ImageAsset(name: "hdar_close")
-  static let icon = ImageAsset(name: "icon")
-  static let trashBin = ImageAsset(name: "trash_bin")
-
-  // swiftlint:disable trailing_comma
-  static let allColors: [ColorAsset] = [
-  ]
-  static let allImages: [ImageAsset] = [
-    ar,
-    fireBase,
-    googleSteetView,
-    icon1,
-    icon10,
-    icon11,
-    icon12,
-    icon2,
-    icon3,
-    icon4,
-    icon5,
-    icon6,
-    icon7,
-    icon8,
-    icon9,
-    machineLearning,
-    pageControl,
-    arrowUp,
-    close,
-    hdarClose,
-    icon,
-    trashBin,
-  ]
-  // swiftlint:enable trailing_comma
-  @available(*, deprecated, renamed: "allImages")
-  static let allValues: [AssetType] = allImages
-}
-// swiftlint:enable identifier_name line_length nesting type_body_length type_name
-
-extension Image {
-  @available(iOS 1.0, tvOS 1.0, watchOS 1.0, *)
-  @available(OSX, deprecated,
+internal extension ImageAsset.Image {
+  @available(macOS, deprecated,
     message: "This initializer is unsafe on macOS, please use the ImageAsset.image property")
   convenience init!(asset: ImageAsset) {
     #if os(iOS) || os(tvOS)
-    let bundle = Bundle(for: BundleToken.self)
+    let bundle = BundleToken.bundle
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
-    #elseif os(OSX)
+    #elseif os(macOS)
     self.init(named: NSImage.Name(asset.name))
     #elseif os(watchOS)
     self.init(named: asset.name)
@@ -116,18 +87,14 @@ extension Image {
   }
 }
 
-extension AssetColorTypeAlias {
-  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
-  convenience init!(asset: ColorAsset) {
-    let bundle = Bundle(for: BundleToken.self)
-    #if os(iOS) || os(tvOS)
-    self.init(named: asset.name, in: bundle, compatibleWith: nil)
-    #elseif os(OSX)
-    self.init(named: NSColor.Name(asset.name), bundle: bundle)
-    #elseif os(watchOS)
-    self.init(named: asset.name)
+// swiftlint:disable convenience_type
+private final class BundleToken {
+  static let bundle: Bundle = {
+    #if SWIFT_PACKAGE
+    return Bundle.module
+    #else
+    return Bundle(for: BundleToken.self)
     #endif
-  }
+  }()
 }
-
-private final class BundleToken {}
+// swiftlint:enable convenience_type
