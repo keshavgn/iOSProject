@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MBz-cb-acP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Machine Learning View Controller-->
+        <scene sceneID="l2V-OC-anv">
+            <objects>
+                <viewController id="MBz-cb-acP" customClass="MachineLearningViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ad-3o-Xir">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-qK-EHI">
+                                <rect key="frame" x="51" y="90" width="274" height="30"/>
+                                <state key="normal" title="Image Recognition"/>
+                                <connections>
+                                    <segue destination="Hp1-wr-gCX" kind="show" id="UDX-fB-eRj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ED-AS-i3W">
+                                <rect key="frame" x="50" y="154" width="274" height="30"/>
+                                <state key="normal" title="Chat Bot"/>
+                                <connections>
+                                    <segue destination="SVn-qx-1kc" kind="show" id="tJj-fu-0Bq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7ED-AS-i3W" firstAttribute="top" secondItem="Wig-qK-EHI" secondAttribute="bottom" constant="34" id="G2o-7N-FCs"/>
+                            <constraint firstItem="Wig-qK-EHI" firstAttribute="leading" secondItem="Vhq-fh-O2A" secondAttribute="leading" constant="51" id="M9p-VZ-Ut8"/>
+                            <constraint firstItem="Vhq-fh-O2A" firstAttribute="trailing" secondItem="7ED-AS-i3W" secondAttribute="trailing" constant="51" id="MEF-7U-Bas"/>
+                            <constraint firstItem="Wig-qK-EHI" firstAttribute="top" secondItem="Vhq-fh-O2A" secondAttribute="top" constant="26" id="QwJ-ZP-GYe"/>
+                            <constraint firstItem="7ED-AS-i3W" firstAttribute="leading" secondItem="Vhq-fh-O2A" secondAttribute="leading" constant="50" id="ecJ-gh-QYf"/>
+                            <constraint firstItem="Vhq-fh-O2A" firstAttribute="trailing" secondItem="Wig-qK-EHI" secondAttribute="trailing" constant="50" id="kE9-sk-nqY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vhq-fh-O2A"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatBotButton" destination="7ED-AS-i3W" id="U0v-l1-smx"/>
+                        <outlet property="imageRecognitionButton" destination="Wig-qK-EHI" id="BAD-Yv-CUN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bs8-xN-rei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="1367"/>
+        </scene>
+        <!--Image Recognition View Controller-->
+        <scene sceneID="edU-XL-9U6">
+            <objects>
+                <viewController id="Hp1-wr-gCX" customClass="MLImageRecognitionViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h2n-eG-Zfh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-PU-Bvf">
+                                <rect key="frame" x="16" y="79" width="343" height="339"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="X8D-97-3z7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-gZ-DRi">
+                                <rect key="frame" x="16" y="442" width="343" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="oYz-Am-KSz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bqy-PU-Bvf" firstAttribute="leading" secondItem="Uad-ei-cxm" secondAttribute="leading" constant="16" id="41u-XM-Jvz"/>
+                            <constraint firstItem="jgs-gZ-DRi" firstAttribute="top" secondItem="bqy-PU-Bvf" secondAttribute="bottom" constant="24" id="9fq-q9-UlS"/>
+                            <constraint firstItem="bqy-PU-Bvf" firstAttribute="top" secondItem="Uad-ei-cxm" secondAttribute="top" constant="15" id="Etl-E1-SY2"/>
+                            <constraint firstItem="Uad-ei-cxm" firstAttribute="trailing" secondItem="jgs-gZ-DRi" secondAttribute="trailing" constant="16" id="GUP-Yf-yyf"/>
+                            <constraint firstItem="Uad-ei-cxm" firstAttribute="trailing" secondItem="bqy-PU-Bvf" secondAttribute="trailing" constant="16" id="R1s-Ft-bEl"/>
+                            <constraint firstItem="jgs-gZ-DRi" firstAttribute="leading" secondItem="Uad-ei-cxm" secondAttribute="leading" constant="16" id="lgA-va-f5W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uad-ei-cxm"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="camera" id="Rhw-32-8xT">
+                            <connections>
+                                <action selector="openCameraOrPhotosApp:" destination="Hp1-wr-gCX" id="hRc-fK-Yh4"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="jgs-gZ-DRi" id="uaK-iM-NYP"/>
+                        <outlet property="camaraBarButtonItem" destination="Rhw-32-8xT" id="IzD-8e-IbN"/>
+                        <outlet property="scene" destination="bqy-PU-Bvf" id="wl2-4Y-2Ug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdr-5R-Rxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="2130"/>
+        </scene>
+        <!--Chat Bot View Controller-->
+        <scene sceneID="MG1-IB-hJb">
+            <objects>
+                <viewController id="SVn-qx-1kc" customClass="MLChatBotViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7FW-wx-5IN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-bu-CvS">
+                                <rect key="frame" x="42" y="255" width="290" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqc-7z-sDC">
+                                <rect key="frame" x="42" y="88" width="290" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-ew-kye">
+                                <rect key="frame" x="42" y="299" width="290" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendMessageToChatBot:" destination="SVn-qx-1kc" eventType="touchUpInside" id="bEm-xi-TvP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3KV-Tf-3sa"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="7S8-bu-CvS" id="4IV-Xs-KhU"/>
+                        <outlet property="sendButton" destination="NcP-ew-kye" id="0Fc-cY-If4"/>
+                        <outlet property="textLabel" destination="oqc-7z-sDC" id="5cb-Zv-GLK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h58-pd-tBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="1642"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="92Q-Sg-lew">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NearbyPOI View Controller-->
+        <scene sceneID="mTC-tP-ebt">
+            <objects>
+                <viewController id="PoZ-aJ-32g" customClass="NearbyPOIViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzx-se-z2p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-DF-Rag">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYG-DF-Rag" firstAttribute="leading" secondItem="pXY-ju-oSm" secondAttribute="leading" id="71M-dw-qt5"/>
+                            <constraint firstItem="XYG-DF-Rag" firstAttribute="trailing" secondItem="pXY-ju-oSm" secondAttribute="trailing" id="VTm-lG-QMo"/>
+                            <constraint firstItem="XYG-DF-Rag" firstAttribute="top" secondItem="pXY-ju-oSm" secondAttribute="top" id="Yjq-gj-Mfk"/>
+                            <constraint firstItem="XYG-DF-Rag" firstAttribute="bottom" secondItem="pXY-ju-oSm" secondAttribute="bottom" id="wFg-5U-KbX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pXY-ju-oSm"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Camera" id="1Na-ah-ePA">
+                            <connections>
+                                <action selector="cameraAction:" destination="PoZ-aJ-32g" id="Tup-eO-HYf"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraBarButtonItem" destination="1Na-ah-ePA" id="aDW-pb-VBE"/>
+                        <outlet property="mapView" destination="XYG-DF-Rag" id="5Nj-EY-fL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kji-yR-2dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="-1809"/>
+        </scene>
+        <!--Augmented Reality View Controller-->
+        <scene sceneID="kf5-dK-9CX">
+            <objects>
+                <viewController id="92Q-Sg-lew" customClass="AugmentedRealityViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jn2-vc-hoN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSv-m6-WUT">
+                                <rect key="frame" x="56" y="91" width="262" height="30"/>
+                                <state key="normal" title="Nearby Point Of Interest"/>
+                                <connections>
+                                    <segue destination="PoZ-aJ-32g" kind="show" id="ib8-Pc-s7I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-h0-rbr">
+                                <rect key="frame" x="56" y="157" width="262" height="30"/>
+                                <state key="normal" title="Virtual Room"/>
+                                <connections>
+                                    <segue destination="jyx-dA-30y" kind="show" id="3yR-ks-GVT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dKm-30-Q9p" firstAttribute="trailing" secondItem="I1c-h0-rbr" secondAttribute="trailing" constant="57" id="kst-nh-Y7j"/>
+                            <constraint firstItem="I1c-h0-rbr" firstAttribute="top" secondItem="iSv-m6-WUT" secondAttribute="bottom" constant="36" id="nB1-nR-Y9p"/>
+                            <constraint firstItem="I1c-h0-rbr" firstAttribute="leading" secondItem="dKm-30-Q9p" secondAttribute="leading" constant="56" id="nwJ-ZX-Xyr"/>
+                            <constraint firstItem="iSv-m6-WUT" firstAttribute="leading" secondItem="dKm-30-Q9p" secondAttribute="leading" constant="56" id="qEU-37-E63"/>
+                            <constraint firstItem="iSv-m6-WUT" firstAttribute="top" secondItem="dKm-30-Q9p" secondAttribute="top" constant="27" id="uHS-lJ-BFi"/>
+                            <constraint firstItem="dKm-30-Q9p" firstAttribute="trailing" secondItem="iSv-m6-WUT" secondAttribute="trailing" constant="57" id="zdp-Fm-zUd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dKm-30-Q9p"/>
+                    </view>
+                    <connections>
+                        <outlet property="nearbyPOIButton" destination="iSv-m6-WUT" id="Zii-x2-tEO"/>
+                        <outlet property="virtualRoomButton" destination="I1c-h0-rbr" id="gtE-67-Zo7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rP-60-tFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="-1265"/>
+        </scene>
+        <!--Virtual Room View Controller-->
+        <scene sceneID="HFO-4e-vPX">
+            <objects>
+                <viewController id="jyx-dA-30y" customClass="VirtualRoomViewController" customModule="iOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJ4-O1-xIc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-4S-bS4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Interruption Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwT-Q7-8yz" userLabel="Session State Label" customClass="RWLabel" customModule="iOSProject" customModuleProvider="target">
+                                <rect key="frame" x="65.5" y="591" width="244" height="62"/>
+                                <color key="backgroundColor" red="0.97852419820000003" green="0.91621538489999999" blue="0.90644908400000002" alpha="0.36490426939999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="cN6-Vd-Q72"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.82745098039999998" green="0.2156862745" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAG-SW-TMd" userLabel="Message Label" customClass="RWLabel" customModule="iOSProject" customModuleProvider="target">
+                                <rect key="frame" x="65.5" y="80" width="244" height="109"/>
+                                <color key="backgroundColor" red="0.97498226170000002" green="0.91289898589999996" blue="0.90316803570000004" alpha="0.41194432219999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="301" id="JkH-dT-ZMO"/>
+                                    <constraint firstAttribute="height" constant="109" id="gJN-hS-pmO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="0.33134185109999997" green="0.1977747078" blue="0.92935490610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-W5-YJf">
+                                <rect key="frame" x="182.5" y="328.5" width="10" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="CPM-NP-cvh"/>
+                                    <constraint firstAttribute="width" constant="10" id="mrP-6l-AwP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IAG-SW-TMd" firstAttribute="leading" secondItem="xwT-Q7-8yz" secondAttribute="leading" id="0Z7-n3-YoZ"/>
+                            <constraint firstItem="3eB-4S-bS4" firstAttribute="top" secondItem="ytr-3E-dxa" secondAttribute="top" id="138-mj-wfn"/>
+                            <constraint firstItem="tg8-W5-YJf" firstAttribute="centerX" secondItem="sJ4-O1-xIc" secondAttribute="centerX" id="3d6-A3-N12"/>
+                            <constraint firstItem="IAG-SW-TMd" firstAttribute="trailing" secondItem="xwT-Q7-8yz" secondAttribute="trailing" id="44e-mO-wHc"/>
+                            <constraint firstItem="IAG-SW-TMd" firstAttribute="top" secondItem="ytr-3E-dxa" secondAttribute="top" constant="16" id="5sX-0D-xxy"/>
+                            <constraint firstItem="tg8-W5-YJf" firstAttribute="centerY" secondItem="sJ4-O1-xIc" secondAttribute="centerY" id="TCE-A3-qp7"/>
+                            <constraint firstItem="xwT-Q7-8yz" firstAttribute="centerX" secondItem="3eB-4S-bS4" secondAttribute="centerX" id="WmI-Om-iUf"/>
+                            <constraint firstItem="3eB-4S-bS4" firstAttribute="bottom" secondItem="ytr-3E-dxa" secondAttribute="bottom" id="ceE-H4-xJl"/>
+                            <constraint firstItem="3eB-4S-bS4" firstAttribute="trailing" secondItem="ytr-3E-dxa" secondAttribute="trailing" id="iic-Vs-OsG"/>
+                            <constraint firstItem="ytr-3E-dxa" firstAttribute="bottom" secondItem="xwT-Q7-8yz" secondAttribute="bottom" constant="14" id="pl1-Zc-CCH"/>
+                            <constraint firstItem="3eB-4S-bS4" firstAttribute="leading" secondItem="ytr-3E-dxa" secondAttribute="leading" id="uht-SW-Ech"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ytr-3E-dxa"/>
+                    </view>
+                    <connections>
+                        <outlet property="crosshair" destination="tg8-W5-YJf" id="X2l-Pd-nbB"/>
+                        <outlet property="messageLabel" destination="IAG-SW-TMd" id="XuI-17-2jS"/>
+                        <outlet property="sceneView" destination="3eB-4S-bS4" id="gl5-RX-bbR"/>
+                        <outlet property="sessionStateLabel" destination="xwT-Q7-8yz" id="Rjk-7d-Lq6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bB3-RF-jDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="-1067"/>
+        </scene>
+    </scenes>
+</document>
